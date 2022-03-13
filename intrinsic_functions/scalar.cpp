@@ -3,12 +3,13 @@
 int main() {
     int a = 20;
     int b = 1;
-    int c = 0;
+    int c = 10;
 
     asm volatile (
-        "add %[src1],%[dest]"   
-        : [dest] "=g"(c)                
-        : [src1] "g"(a)
+        "add %1,%0"   
+        : "+r"(c)                
+        : "r"(a)
+        : "cc"
     );
 
     std::cout << "c: " << c << std::endl;
