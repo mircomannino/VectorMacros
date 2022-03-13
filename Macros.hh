@@ -41,7 +41,7 @@ asm volatile(                   \
 #define VADD_128(srca, srcb, dest) \
 asm volatile(                           \
     "vaddps %[vsrca],%[vsrcb],%[vdest]" \
-    : [vdest] "=x"(dest)                \
-    : [vsrca] "x"(srca),                \
-      [vsrcb] "x"(srcb)                 \
+    : [vdest] "=m"(dest)                \
+    : [vsrca] "m"(srca),                \
+      [vsrcb] "m"(srcb)                 \
 );

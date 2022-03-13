@@ -31,14 +31,14 @@ void vectorized_macro(float* a, float* b, float* c, const uint64_t N)
 
     for(auto i = 0; i < nb_iter; i++, a+=4, b+=4, c+=4)
     {
-        __m128* A;
-        __m128* B;
-        __m128* C;
+        __m128 A;
+        __m128 B;
+        __m128 C;
         VLOAD_128(a, A);
-        VLOAD_128(b, B);
+        VLOAD_128(B, b);
         VLOAD_128(c, C);
-        // *C = _mm_add_ps(*A, *B);
-        VADD_128(A, B, C);
+        C = _mm_add_ps(A, B);
+        // VADD_128(A, B, C);
         // _mm_store_ps(c, *C);
         VSTORE_128(C, c);
     }
