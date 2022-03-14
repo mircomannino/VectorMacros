@@ -8,28 +8,28 @@ void naive(float* a, float* b, float* c, const uint64_t N)
 {  
     for(auto i = 0; i < N; i++)
     {
-        c[i] = a[i] + b[i];
+        c[i] += a[i] * b[i];
     }
 }
 
 void vectorized(float* a, float* b, float* c, const uint64_t N)
 {
-    const uint64_t nb_iter = N / 4;
+    const uint64_t nb_iter = N / 8;
 
-    for(auto i = 0; i < nb_iter; i++, a+=4, b+=4, c+=4)
+    for(auto i = 0; i < nb_iter; i++, a+=8, b+=8, c+=8)
     {
-        _mm_store_ps(c, _mm_add_ps(*(__m128*)a, *(__m128*)b));
+        _mm256_store_ps(c, _mm256_fmadd_ps(*(__m256*)a, *(__m256*)b, *(__m256*)c));
     }
 }
 
 void vectorized_macro(float* a, float* b, float* c, const uint64_t N)
 {
-    const uint64_t nb_iter = N / 4;
+    const uint64_t nb_iter = N / 8;
 
 
-    for(auto i = 0; i < nb_iter; i++, a+=4, b+=4, c+=4)
+    for(auto i = 0; i < nb_iter; i++, a+=8, b+=8, c+=8)
     {
-        VADD_128(*(__m128*)a, *(__m128*)b, *(__m128*)c);
+        VFMADD_256(*(__m256*)a, *(__m256*)b, *(__m256*)c);
     }
 }
 
@@ -45,9 +45,9 @@ int main(int argc, char* argv[])
     float* a;                                          
     float* b;         
     float* c;                                                                                                                                                    
-    posix_memalign((void**)&a, 16,  N * sizeof(float));
-    posix_memalign((void**)&b, 16,  N * sizeof(float));
-    posix_memalign((void**)&c, 16,  N * sizeof(float));
+    posix_memalign((void**)&a, 32,  N * sizeof(float));
+    posix_memalign((void**)&b, 32,  N * sizeof(float));
+    posix_memalign((void**)&c, 32,  N * sizeof(float));
 
     for(auto i = 0; i < N; i++)
     {
@@ -75,9 +75,9 @@ int main(int argc, char* argv[])
 
     for(auto i = 0; i < N; i++)
     {
-        a[i] = 12.0;
+        a[i] = 2.0;
         b[i] = 8.0;
-        c[i] = 3.0;
+        c[i] = 0.0;
     }
 
     {
