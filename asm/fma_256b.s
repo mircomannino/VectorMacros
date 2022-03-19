@@ -393,7 +393,11 @@ _Z16vectorized_macroPfS_S_m:
 	.string	"Vectorized"
 .LC12:
 	.string	"Vectorized (Macro)"
+<<<<<<< HEAD
 .LC13:
+=======
+.LC12:
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	" "
 	.text
 	.globl	main
@@ -414,11 +418,19 @@ main:
 	.cfi_offset 3, -24
 	movl	%edi, -164(%rbp)
 	movq	%rsi, -176(%rbp)
+<<<<<<< HEAD
 	.loc 2 42 0
 	movq	%fs:40, %rax
 	movq	%rax, -24(%rbp)
 	xorl	%eax, %eax
 	.loc 2 43 0
+=======
+	.loc 2 37 1
+	movq	%fs:40, %rax
+	movq	%rax, -24(%rbp)
+	xorl	%eax, %eax
+	.loc 2 38 5
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	cmpl	$2, -164(%rbp)
 	je	.L17
 	.loc 2 45 0
@@ -431,7 +443,11 @@ main:
 	movl	$1, %eax
 	jmp	.L27
 .L17:
+<<<<<<< HEAD
 	.loc 2 48 0
+=======
+	.loc 2 43 35
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	movq	-176(%rbp), %rax
 	addq	$8, %rax
 	movq	(%rax), %rax
@@ -460,39 +476,78 @@ main:
 	movl	$32, %esi
 	movq	%rax, %rdi
 	call	posix_memalign@PLT
+<<<<<<< HEAD
 .LBB18:
 	.loc 2 57 0
 	movl	$0, -144(%rbp)
 .L20:
 	.loc 2 57 0 is_stmt 0 discriminator 3
+=======
+.LBB17:
+	.loc 2 52 14
+	movl	$0, -144(%rbp)
+.L20:
+	.loc 2 52 21 discriminator 3
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	movl	-144(%rbp), %eax
 	cltq
 	cmpq	%rax, -104(%rbp)
 	jbe	.L19
+<<<<<<< HEAD
 	.loc 2 59 0 is_stmt 1 discriminator 2
 	movq	-128(%rbp), %rax
 	movl	-144(%rbp), %edx
 	movslq	%edx, %rdx
 	salq	$2, %rdx
+=======
+	.loc 2 54 12 discriminator 2
+	movq	-128(%rbp), %rdx
+	.loc 2 54 11 discriminator 2
+	movl	-144(%rbp), %eax
+	cltq
+	.loc 2 54 12 discriminator 2
+	salq	$2, %rax
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	addq	%rdx, %rax
 	vmovss	.LC5(%rip), %xmm0
 	vmovss	%xmm0, (%rax)
+<<<<<<< HEAD
 	.loc 2 60 0 discriminator 2
 	movq	-120(%rbp), %rax
 	movl	-144(%rbp), %edx
 	movslq	%edx, %rdx
 	salq	$2, %rdx
+=======
+	.loc 2 55 12 discriminator 2
+	movq	-120(%rbp), %rdx
+	.loc 2 55 11 discriminator 2
+	movl	-144(%rbp), %eax
+	cltq
+	.loc 2 55 12 discriminator 2
+	salq	$2, %rax
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	addq	%rdx, %rax
 	vmovss	.LC6(%rip), %xmm0
 	vmovss	%xmm0, (%rax)
+<<<<<<< HEAD
 	.loc 2 61 0 discriminator 2
 	movq	-112(%rbp), %rax
 	movl	-144(%rbp), %edx
 	movslq	%edx, %rdx
 	salq	$2, %rdx
+=======
+	.loc 2 56 12 discriminator 2
+	movq	-112(%rbp), %rdx
+	.loc 2 56 11 discriminator 2
+	movl	-144(%rbp), %eax
+	cltq
+	.loc 2 56 12 discriminator 2
+	salq	$2, %rax
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	addq	%rdx, %rax
 	vxorps	%xmm0, %xmm0, %xmm0
 	vmovss	%xmm0, (%rax)
+<<<<<<< HEAD
 	.loc 2 57 0 discriminator 2
 	addl	$1, -144(%rbp)
 	jmp	.L20
@@ -500,6 +555,15 @@ main:
 .LBE18:
 .LBB19:
 	.loc 2 65 0
+=======
+	.loc 2 52 5 discriminator 2
+	incl	-144(%rbp)
+	jmp	.L20
+.L19:
+.LBE17:
+.LBB18:
+	.loc 2 60 9
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcEC1Ev@PLT
@@ -535,40 +599,80 @@ main:
 	leaq	-64(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZN5TimerD1Ev
+<<<<<<< HEAD
 .LBE19:
 .LBB20:
 	.loc 2 69 0
 	movl	$0, -140(%rbp)
 .L22:
 	.loc 2 69 0 is_stmt 0 discriminator 3
+=======
+.LBE18:
+.LBB19:
+	.loc 2 64 14
+	movl	$0, -140(%rbp)
+.L22:
+	.loc 2 64 21 discriminator 3
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	movl	-140(%rbp), %eax
 	cltq
 	cmpq	%rax, -104(%rbp)
 	jbe	.L21
+<<<<<<< HEAD
 	.loc 2 71 0 is_stmt 1 discriminator 2
 	movq	-128(%rbp), %rax
 	movl	-140(%rbp), %edx
 	movslq	%edx, %rdx
 	salq	$2, %rdx
+=======
+	.loc 2 66 12 discriminator 2
+	movq	-128(%rbp), %rdx
+	.loc 2 66 11 discriminator 2
+	movl	-140(%rbp), %eax
+	cltq
+	.loc 2 66 12 discriminator 2
+	salq	$2, %rax
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	addq	%rdx, %rax
 	vmovss	.LC5(%rip), %xmm0
 	vmovss	%xmm0, (%rax)
+<<<<<<< HEAD
 	.loc 2 72 0 discriminator 2
 	movq	-120(%rbp), %rax
 	movl	-140(%rbp), %edx
 	movslq	%edx, %rdx
 	salq	$2, %rdx
+=======
+	.loc 2 67 12 discriminator 2
+	movq	-120(%rbp), %rdx
+	.loc 2 67 11 discriminator 2
+	movl	-140(%rbp), %eax
+	cltq
+	.loc 2 67 12 discriminator 2
+	salq	$2, %rax
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	addq	%rdx, %rax
 	vmovss	.LC9(%rip), %xmm0
 	vmovss	%xmm0, (%rax)
+<<<<<<< HEAD
 	.loc 2 73 0 discriminator 2
 	movq	-112(%rbp), %rax
 	movl	-140(%rbp), %edx
 	movslq	%edx, %rdx
 	salq	$2, %rdx
+=======
+	.loc 2 68 12 discriminator 2
+	movq	-112(%rbp), %rdx
+	.loc 2 68 11 discriminator 2
+	movl	-140(%rbp), %eax
+	cltq
+	.loc 2 68 12 discriminator 2
+	salq	$2, %rax
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	addq	%rdx, %rax
 	vxorps	%xmm0, %xmm0, %xmm0
 	vmovss	%xmm0, (%rax)
+<<<<<<< HEAD
 	.loc 2 69 0 discriminator 2
 	addl	$1, -140(%rbp)
 	jmp	.L22
@@ -576,6 +680,15 @@ main:
 .LBE20:
 .LBB21:
 	.loc 2 77 0
+=======
+	.loc 2 64 5 discriminator 2
+	incl	-140(%rbp)
+	jmp	.L22
+.L21:
+.LBE19:
+.LBB20:
+	.loc 2 72 9
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcEC1Ev@PLT
@@ -611,16 +724,26 @@ main:
 	leaq	-64(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZN5TimerD1Ev
+<<<<<<< HEAD
 .LBE21:
 .LBB22:
 	.loc 2 81 0
 	movl	$0, -136(%rbp)
 .L24:
 	.loc 2 81 0 is_stmt 0 discriminator 3
+=======
+.LBE20:
+.LBB21:
+	.loc 2 76 14
+	movl	$0, -136(%rbp)
+.L24:
+	.loc 2 76 21 discriminator 3
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	movl	-136(%rbp), %eax
 	cltq
 	cmpq	%rax, -104(%rbp)
 	jbe	.L23
+<<<<<<< HEAD
 	.loc 2 83 0 is_stmt 1 discriminator 2
 	movq	-128(%rbp), %rax
 	movl	-136(%rbp), %edx
@@ -634,9 +757,30 @@ main:
 	movl	-136(%rbp), %edx
 	movslq	%edx, %rdx
 	salq	$2, %rdx
+=======
+	.loc 2 78 12 discriminator 2
+	movq	-128(%rbp), %rdx
+	.loc 2 78 11 discriminator 2
+	movl	-136(%rbp), %eax
+	cltq
+	.loc 2 78 12 discriminator 2
+	salq	$2, %rax
+	addq	%rdx, %rax
+	.loc 2 78 14 discriminator 2
+	vmovss	.LC6(%rip), %xmm0
+	vmovss	%xmm0, (%rax)
+	.loc 2 79 12 discriminator 2
+	movq	-120(%rbp), %rdx
+	.loc 2 79 11 discriminator 2
+	movl	-136(%rbp), %eax
+	cltq
+	.loc 2 79 12 discriminator 2
+	salq	$2, %rax
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	addq	%rdx, %rax
 	vmovss	.LC9(%rip), %xmm0
 	vmovss	%xmm0, (%rax)
+<<<<<<< HEAD
 	.loc 2 85 0 discriminator 2
 	movq	-112(%rbp), %rax
 	movl	-136(%rbp), %edx
@@ -652,6 +796,26 @@ main:
 .LBE22:
 .LBB23:
 	.loc 2 89 0
+=======
+	.loc 2 80 12 discriminator 2
+	movq	-112(%rbp), %rdx
+	.loc 2 80 11 discriminator 2
+	movl	-136(%rbp), %eax
+	cltq
+	.loc 2 80 12 discriminator 2
+	salq	$2, %rax
+	addq	%rdx, %rax
+	.loc 2 80 14 discriminator 2
+	vmovss	.LC5(%rip), %xmm0
+	vmovss	%xmm0, (%rax)
+	.loc 2 76 5 discriminator 2
+	incl	-136(%rbp)
+	jmp	.L24
+.L23:
+.LBE21:
+.LBB22:
+	.loc 2 84 9
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcEC1Ev@PLT
@@ -687,6 +851,7 @@ main:
 	leaq	-64(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZN5TimerD1Ev
+<<<<<<< HEAD
 .LBE23:
 .LBB24:
 	.loc 2 93 0
@@ -718,26 +883,79 @@ main:
 .L25:
 .LBE24:
 	.loc 2 97 0
+=======
+.LBE22:
+.LBB23:
+	.loc 2 88 14
+	movl	$0, -132(%rbp)
+.L26:
+	.loc 2 88 21 discriminator 1
+	movl	-132(%rbp), %eax
+	cltq
+	.loc 2 88 23 discriminator 1
+	cmpq	%rax, -104(%rbp)
+	jbe	.L25
+	.loc 2 90 25
+	movq	-112(%rbp), %rdx
+	.loc 2 90 24
+	movl	-132(%rbp), %eax
+	cltq
+	.loc 2 90 25
+	salq	$2, %rax
+	addq	%rdx, %rax
+	movl	(%rax), %eax
+	vmovd	%eax, %xmm0
+	leaq	_ZSt4cout(%rip), %rdi
+.LEHB7:
+	call	_ZNSolsEf@PLT
+	.loc 2 90 30
+	leaq	.LC12(%rip), %rsi
+	movq	%rax, %rdi
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
+	.loc 2 88 5
+	incl	-132(%rbp)
+	jmp	.L26
+.L25:
+.LBE23:
+	.loc 2 92 23
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	movq	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GOTPCREL(%rip), %rax
 	movq	%rax, %rsi
 	leaq	_ZSt4cout(%rip), %rdi
 	call	_ZNSolsEPFRSoS_E@PLT
+<<<<<<< HEAD
 	.loc 2 99 0
 	movl	$0, %eax
 .L27:
 	.loc 2 100 0 discriminator 1
+=======
+	.loc 2 94 12
+	movl	$0, %eax
+.L27:
+	.loc 2 95 1 discriminator 1
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	movq	-24(%rbp), %rcx
 	xorq	%fs:40, %rcx
 	je	.L34
 	jmp	.L41
 .L36:
+<<<<<<< HEAD
 	movq	%rax, %rbx
 .LBB25:
+=======
+	endbr64
+	movq	%rax, %rbx
+.LBB24:
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
 	jmp	.L29
 .L35:
+<<<<<<< HEAD
+=======
+	endbr64
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	movq	%rax, %rbx
 .L29:
 	leaq	-145(%rbp), %rax
@@ -747,14 +965,25 @@ main:
 	movq	%rax, %rdi
 	call	_Unwind_Resume@PLT
 .L38:
+<<<<<<< HEAD
 	movq	%rax, %rbx
 .LBE25:
 .LBB26:
+=======
+	endbr64
+	movq	%rax, %rbx
+.LBE24:
+.LBB25:
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
 	jmp	.L31
 .L37:
+<<<<<<< HEAD
+=======
+	endbr64
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	movq	%rax, %rbx
 .L31:
 	leaq	-145(%rbp), %rax
@@ -764,14 +993,25 @@ main:
 	movq	%rax, %rdi
 	call	_Unwind_Resume@PLT
 .L40:
+<<<<<<< HEAD
 	movq	%rax, %rbx
 .LBE26:
 .LBB27:
+=======
+	endbr64
+	movq	%rax, %rbx
+.LBE25:
+.LBB26:
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
 	jmp	.L33
 .L39:
+<<<<<<< HEAD
+=======
+	endbr64
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	movq	%rax, %rbx
 .L33:
 	leaq	-145(%rbp), %rax
@@ -782,8 +1022,13 @@ main:
 	call	_Unwind_Resume@PLT
 .LEHE7:
 .L41:
+<<<<<<< HEAD
 .LBE27:
 	.loc 2 100 0 is_stmt 0
+=======
+.LBE26:
+	.loc 2 95 1 is_stmt 0
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	call	__stack_chk_fail@PLT
 .L34:
 	addq	$168, %rsp
@@ -806,27 +1051,51 @@ main:
 	.uleb128 0
 	.uleb128 .LEHB1-.LFB5471
 	.uleb128 .LEHE1-.LEHB1
+<<<<<<< HEAD
 	.uleb128 .L35-.LFB5471
+=======
+	.uleb128 .L35-.LFB5835
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0
 	.uleb128 .LEHB2-.LFB5471
 	.uleb128 .LEHE2-.LEHB2
+<<<<<<< HEAD
 	.uleb128 .L36-.LFB5471
+=======
+	.uleb128 .L36-.LFB5835
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0
 	.uleb128 .LEHB3-.LFB5471
 	.uleb128 .LEHE3-.LEHB3
+<<<<<<< HEAD
 	.uleb128 .L37-.LFB5471
+=======
+	.uleb128 .L37-.LFB5835
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0
 	.uleb128 .LEHB4-.LFB5471
 	.uleb128 .LEHE4-.LEHB4
+<<<<<<< HEAD
 	.uleb128 .L38-.LFB5471
+=======
+	.uleb128 .L38-.LFB5835
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0
 	.uleb128 .LEHB5-.LFB5471
 	.uleb128 .LEHE5-.LEHB5
+<<<<<<< HEAD
 	.uleb128 .L39-.LFB5471
+=======
+	.uleb128 .L39-.LFB5835
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0
 	.uleb128 .LEHB6-.LFB5471
 	.uleb128 .LEHE6-.LEHB6
+<<<<<<< HEAD
 	.uleb128 .L40-.LFB5471
+=======
+	.uleb128 .L40-.LFB5835
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0
 	.uleb128 .LEHB7-.LFB5471
 	.uleb128 .LEHE7-.LEHB7
@@ -837,8 +1106,13 @@ main:
 	.size	main, .-main
 	.type	_Z41__static_initialization_and_destruction_0ii, @function
 _Z41__static_initialization_and_destruction_0ii:
+<<<<<<< HEAD
 .LFB5965:
 	.loc 2 100 0 is_stmt 1
+=======
+.LFB6364:
+	.loc 2 95 1 is_stmt 1
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -851,11 +1125,19 @@ _Z41__static_initialization_and_destruction_0ii:
 	.loc 2 100 0
 	cmpl	$1, -4(%rbp)
 	jne	.L44
+<<<<<<< HEAD
 	.loc 2 100 0 is_stmt 0 discriminator 1
 	cmpl	$65535, -8(%rbp)
 	jne	.L44
 	.file 5 "/usr/include/c++/7/iostream"
 	.loc 5 74 0 is_stmt 1
+=======
+	.loc 2 95 1 is_stmt 0 discriminator 1
+	cmpl	$65535, -8(%rbp)
+	jne	.L44
+	.file 5 "/usr/include/c++/9/iostream"
+	.loc 5 74 25 is_stmt 1
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	leaq	_ZStL8__ioinit(%rip), %rdi
 	call	_ZNSt8ios_base4InitC1Ev@PLT
 	leaq	__dso_handle(%rip), %rdx
@@ -864,18 +1146,31 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, %rdi
 	call	__cxa_atexit@PLT
 .L44:
+<<<<<<< HEAD
 	.loc 2 100 0
+=======
+	.loc 2 95 1
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	nop
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
+<<<<<<< HEAD
 .LFE5965:
 	.size	_Z41__static_initialization_and_destruction_0ii, .-_Z41__static_initialization_and_destruction_0ii
 	.type	_GLOBAL__sub_I__Z5naivePfS_S_m, @function
 _GLOBAL__sub_I__Z5naivePfS_S_m:
 .LFB5966:
 	.loc 2 100 0
+=======
+.LFE6364:
+	.size	_Z41__static_initialization_and_destruction_0ii, .-_Z41__static_initialization_and_destruction_0ii
+	.type	_GLOBAL__sub_I__Z5naivePfS_S_m, @function
+_GLOBAL__sub_I__Z5naivePfS_S_m:
+.LFB6365:
+	.loc 2 95 1
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.cfi_startproc
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
@@ -890,7 +1185,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
+<<<<<<< HEAD
 .LFE5966:
+=======
+.LFE6365:
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.size	_GLOBAL__sub_I__Z5naivePfS_S_m, .-_GLOBAL__sub_I__Z5naivePfS_S_m
 	.section	.init_array,"aw"
 	.align 8
@@ -982,7 +1281,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.file 67 "/usr/include/c++/7/stdlib.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
+<<<<<<< HEAD
 	.long	0x64e3
+=======
+	.long	0x6ace
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.value	0x4
 	.long	.Ldebug_abbrev0
 	.byte	0x8
@@ -998,9 +1301,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.string	"std"
 	.byte	0x2a
 	.byte	0
+<<<<<<< HEAD
 	.long	0x34b9
 	.uleb128 0x39
 	.long	.LASF0
+=======
+	.long	0x3751
+	.uleb128 0x5f
+	.long	.LASF392
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0xb
 	.byte	0xfd
 	.long	0x1b08
@@ -1080,7 +1389,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF310
 	.byte	0xf
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x5a
+=======
+	.uleb128 0x60
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x10
 	.byte	0x6
 	.byte	0xa1
@@ -1365,10 +1678,28 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.long	0x5531
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x29
 	.long	.LASF47
 	.byte	0x6
 	.value	0x12b
+=======
+	.uleb128 0x28
+	.long	.LASF47
+	.byte	0x6
+	.value	0x15e
+	.byte	0x7
+	.long	.LASF49
+	.long	0x423
+	.uleb128 0x1
+	.long	0x47a2
+	.uleb128 0x1
+	.long	0x4458
+	.uleb128 0x1
+	.long	0x113
+	.byte	0
+	.uleb128 0x28
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.long	.LASF48
 	.long	0x107
 	.long	0x3a3
@@ -1380,8 +1711,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x411e
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x3b
 	.long	.LASF49
+=======
+	.uleb128 0x28
+	.long	.LASF51
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x6
 	.value	0x135
 	.long	.LASF51
@@ -1396,8 +1732,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x411e
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x29
 	.long	.LASF52
+=======
+	.uleb128 0x28
+	.long	.LASF53
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x6
 	.value	0x13e
 	.long	.LASF53
@@ -1411,8 +1752,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x107
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x29
 	.long	.LASF54
+=======
+	.uleb128 0x17
+	.long	.LASF55
+	.byte	0x6
+	.byte	0x62
+	.byte	0x44
+	.long	0x3ae1
+	.byte	0x1
+	.uleb128 0x28
+	.long	.LASF53
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x6
 	.value	0x146
 	.long	.LASF55
@@ -1424,8 +1777,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x411e
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x28
 	.long	.LASF56
+=======
+	.uleb128 0x17
+	.long	.LASF57
+	.byte	0x6
+	.byte	0x64
+	.byte	0x8
+	.long	0x3d20
+	.byte	0x1
+	.uleb128 0x28
+	.long	.LASF53
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x6
 	.value	0x14f
 	.long	.LASF58
@@ -1438,7 +1803,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x107
 	.byte	0
 	.uleb128 0x28
+<<<<<<< HEAD
 	.long	.LASF57
+=======
+	.long	.LASF53
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x6
 	.value	0x158
 	.long	.LASF59
@@ -1582,8 +1951,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.long	0x5526
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x4d
 	.long	.LASF75
+=======
+	.uleb128 0x50
+	.long	.LASF68
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x6
 	.value	0x1ad
 	.long	.LASF91
@@ -4003,6 +4377,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF269
 	.byte	0x1
 	.byte	0xa
+<<<<<<< HEAD
 	.byte	0x56
 	.long	0x1d18
 	.uleb128 0x5b
@@ -4010,6 +4385,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0xa
 	.byte	0x59
 	.long	.LASF270
+=======
+	.long	0x1e49
+	.uleb128 0x61
+	.long	.LASF266
+	.byte	0x9
+	.byte	0x5e
+	.byte	0xe
+	.long	.LASF267
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1
 	.long	0x1d11
 	.uleb128 0x2
@@ -4017,9 +4401,22 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.byte	0
 	.uleb128 0xa
+<<<<<<< HEAD
 	.long	0x1cf5
 	.uleb128 0x2a
 	.long	.LASF316
+=======
+	.long	0x1e24
+	.uleb128 0x2c
+	.long	.LASF314
+	.byte	0x9
+	.byte	0x62
+	.byte	0x1a
+	.long	.LASF411
+	.long	0x1e49
+	.uleb128 0x51
+	.long	.LASF435
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0xa
 	.byte	0x5d
 	.long	.LASF408
@@ -4235,10 +4632,18 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x5
 	.long	.LASF295
 	.byte	0xb
+<<<<<<< HEAD
 	.byte	0xeb
 	.long	0x48cd
 	.uleb128 0x4f
 	.long	.LASF380
+=======
+	.value	0x106
+	.byte	0x1d
+	.long	0x4d06
+	.uleb128 0x52
+	.long	.LASF388
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xa
 	.long	0x1f24
 	.uleb128 0xc
@@ -4338,6 +4743,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x1
 	.byte	0
 	.uleb128 0xa
+<<<<<<< HEAD
 	.long	0x1fa4
 	.uleb128 0x3c
 	.long	.LASF307
@@ -4349,6 +4755,27 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0xa6e
 	.uleb128 0x5c
 	.long	.LASF318
+=======
+	.long	0x20f0
+	.uleb128 0x1a
+	.long	.LASF304
+	.byte	0xb
+	.value	0x102
+	.byte	0x1a
+	.long	0x41c2
+	.uleb128 0x62
+	.long	.LASF305
+	.byte	0xc
+	.value	0x9bd
+	.byte	0xd
+	.uleb128 0x62
+	.long	.LASF306
+	.byte	0xc
+	.value	0xa0b
+	.byte	0xd
+	.uleb128 0x63
+	.long	.LASF316
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1
 	.byte	0xe
 	.byte	0x4a
@@ -4420,10 +4847,18 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x1
 	.byte	0xf
 	.byte	0x4c
+<<<<<<< HEAD
 	.long	0x20d3
 	.uleb128 0x5b
 	.long	.LASF314
 	.byte	0xf
+=======
+	.byte	0xa
+	.long	0x223b
+	.uleb128 0x61
+	.long	.LASF312
+	.byte	0xe
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x4c
 	.long	.LASF315
 	.byte	0x1
@@ -4441,8 +4876,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x20d3
 	.byte	0x1
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x5c
 	.long	.LASF319
+=======
+	.uleb128 0x63
+	.long	.LASF317
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1
 	.byte	0x10
 	.byte	0x59
@@ -4476,7 +4916,27 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x2100
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x5d
+=======
+	.uleb128 0x64
+	.long	.LASF321
+	.byte	0x10
+	.byte	0x32
+	.byte	0xd
+	.uleb128 0x1e
+	.long	.LASF322
+	.byte	0x1
+	.byte	0x11
+	.value	0x122
+	.byte	0xc
+	.long	0x2487
+	.uleb128 0x28
+	.long	.LASF157
+	.byte	0x11
+	.value	0x12b
+	.byte	0x7
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.long	.LASF323
 	.byte	0x11
 	.byte	0x32
@@ -4635,7 +5095,18 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4962
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x12
+=======
+	.uleb128 0x65
+	.string	"eof"
+	.byte	0x11
+	.value	0x18e
+	.byte	0x7
+	.long	.LASF356
+	.long	0x2404
+	.uleb128 0xd
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.long	.LASF341
 	.byte	0x12
 	.value	0x174
@@ -4655,8 +5126,21 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x214b
 	.uleb128 0x5f
 	.long	.LASF343
+<<<<<<< HEAD
 	.byte	0x12
 	.value	0x17c
+=======
+	.byte	0x1
+	.byte	0x11
+	.value	0x19a
+	.byte	0xc
+	.long	0x2673
+	.uleb128 0x28
+	.long	.LASF157
+	.byte	0x11
+	.value	0x1a3
+	.byte	0x7
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.long	.LASF344
 	.long	0x214b
 	.uleb128 0x1
@@ -4803,6 +5287,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x2313
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x12
 	.long	.LASF337
 	.byte	0x12
@@ -4817,6 +5302,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF339
 	.byte	0x12
 	.value	0x1de
+=======
+	.uleb128 0x65
+	.string	"eof"
+	.byte	0x11
+	.value	0x1f9
+	.byte	0x7
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.long	.LASF357
 	.long	0x2324
 	.long	0x248e
@@ -5329,6 +5821,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x2804
 	.byte	0
+<<<<<<< HEAD
+=======
+	.uleb128 0x1a
+	.long	.LASF373
+	.byte	0x17
+	.value	0x198
+	.byte	0xd
+	.long	0x524a
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x28
 	.long	.LASF374
 	.byte	0x18
@@ -5477,6 +5978,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x3f4d
 	.byte	0
 	.uleb128 0xa
+<<<<<<< HEAD
 	.long	0x28d3
 	.uleb128 0x76
 	.long	.LASF391
@@ -5485,14 +5987,45 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x29ed
 	.uleb128 0x3c
 	.long	.LASF392
+=======
+	.long	0x2afa
+	.uleb128 0x52
+	.long	.LASF389
+	.uleb128 0x52
+	.long	.LASF390
+	.uleb128 0x5
+	.long	.LASF391
+	.byte	0x19
+	.byte	0x4f
+	.byte	0x21
+	.long	0x41
+	.uleb128 0xa
+	.long	0x2bfc
+	.uleb128 0x5f
+	.long	.LASF393
+	.byte	0x6
+	.value	0x1a9e
+	.byte	0x14
+	.long	0x2c3f
+	.uleb128 0x53
+	.long	.LASF394
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x6
 	.value	0x1a0c
 	.uleb128 0x30
 	.byte	0x6
+<<<<<<< HEAD
 	.value	0x1a0d
 	.long	0x29cc
 	.uleb128 0x3c
 	.long	.LASF393
+=======
+	.value	0x1aa0
+	.byte	0x14
+	.long	0x2c1a
+	.uleb128 0x53
+	.long	.LASF395
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1a
 	.value	0x37b
 	.uleb128 0x30
@@ -5508,7 +6041,12 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.string	"_V2"
 	.byte	0x1b
 	.byte	0x47
+<<<<<<< HEAD
 	.uleb128 0x4e
+=======
+	.byte	0x14
+	.uleb128 0x66
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1b
 	.byte	0x47
 	.long	0x29f5
@@ -5554,6 +6092,21 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.long	0x3f59
 	.byte	0
+<<<<<<< HEAD
+=======
+	.uleb128 0x67
+	.long	.LASF401
+	.byte	0x1c
+	.value	0x26d
+	.byte	0x1b
+	.long	0x523e
+	.uleb128 0x67
+	.long	.LASF402
+	.byte	0x1c
+	.value	0x26e
+	.byte	0x14
+	.long	0x4d30
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0
 	.byte	0
 	.uleb128 0x3
@@ -5740,9 +6293,16 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x3
 	.byte	0x1f
 	.byte	0x47
+<<<<<<< HEAD
 	.long	0x5790
 	.uleb128 0x39
 	.long	.LASF424
+=======
+	.byte	0xb
+	.long	0x5d09
+	.uleb128 0x51
+	.long	.LASF436
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1a
 	.byte	0x3b
 	.long	0x2c28
@@ -5855,8 +6415,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.uleb128 0x1c
 	.string	"_Tp"
+<<<<<<< HEAD
 	.long	0x46ba
 	.uleb128 0x2d
+=======
+	.long	0x4a3e
+	.uleb128 0x68
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"__v"
 	.long	0x46ba
 	.byte	0x8
@@ -6028,6 +6593,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x46ba
 	.byte	0x8
 	.byte	0x1
+<<<<<<< HEAD
 	.byte	0
 	.byte	0
 	.byte	0
@@ -6039,6 +6605,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF436
 	.long	0x46ba
 	.byte	0x8
+=======
+	.uleb128 0x54
+	.long	.LASF448
+	.long	0x4a3e
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1
 	.byte	0
 	.byte	0
@@ -6074,10 +6645,25 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.uleb128 0x15
 	.string	"den"
+<<<<<<< HEAD
 	.byte	0x20
 	.value	0x111
 	.long	0x4b65
 	.byte	0x8
+=======
+	.byte	0x21
+	.value	0x10f
+	.byte	0x21
+	.long	0x5037
+	.byte	0x1
+	.uleb128 0x4a
+	.long	.LASF447
+	.long	0x4a3e
+	.value	0xe10
+	.uleb128 0x54
+	.long	.LASF448
+	.long	0x4a3e
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1
 	.byte	0
 	.byte	0
@@ -6151,8 +6737,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.uleb128 0x1c
 	.string	"_Tp"
+<<<<<<< HEAD
 	.long	0x46ba
 	.uleb128 0x2d
+=======
+	.long	0x4a3e
+	.uleb128 0x69
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"__v"
 	.long	0x46ba
 	.byte	0x8
@@ -6265,6 +6856,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x46ba
 	.byte	0x8
 	.byte	0x3c
+<<<<<<< HEAD
 	.byte	0
 	.byte	0
 	.byte	0
@@ -6276,6 +6868,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF436
 	.long	0x46ba
 	.byte	0x8
+=======
+	.uleb128 0x54
+	.long	.LASF448
+	.long	0x4a3e
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1
 	.byte	0
 	.byte	0
@@ -6440,8 +7037,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.uleb128 0x1c
 	.string	"_Tp"
+<<<<<<< HEAD
 	.long	0x46ba
 	.uleb128 0x2d
+=======
+	.long	0x4a3e
+	.uleb128 0x69
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"__v"
 	.long	0x46ba
 	.byte	0x8
@@ -6503,11 +7105,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.byte	0
 	.uleb128 0x19
+<<<<<<< HEAD
 	.long	.LASF436
 	.long	0x46ba
 	.byte	0x8
 	.byte	0xe8
 	.byte	0x3
+=======
+	.string	"_Tp"
+	.long	0x4a3e
+	.uleb128 0x68
+	.string	"__v"
+	.long	0x4a3e
+	.long	0xf4240
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0
 	.byte	0
 	.byte	0
@@ -6910,6 +7521,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x5839
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x62
 	.long	.LASF485
 	.byte	0x22
@@ -6917,6 +7529,16 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF510
 	.long	0x5e97
 	.uleb128 0x1c
+=======
+	.uleb128 0x6a
+	.long	.LASF497
+	.byte	0x23
+	.byte	0x63
+	.byte	0x5
+	.long	.LASF523
+	.long	0x6499
+	.uleb128 0x19
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"_Tp"
 	.long	0x54ff
 	.uleb128 0x1
@@ -6926,10 +7548,16 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x39
 	.long	.LASF486
 	.byte	0xb
+<<<<<<< HEAD
 	.byte	0xff
 	.long	0x3e6e
 	.uleb128 0x3c
 	.long	.LASF0
+=======
+	.long	0x4193
+	.uleb128 0x53
+	.long	.LASF392
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0xb
 	.value	0x101
 	.uleb128 0x30
@@ -6937,6 +7565,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x101
 	.long	0x34c4
 	.uleb128 0x3
+<<<<<<< HEAD
 	.byte	0x9
 	.byte	0xf8
 	.long	0x4864
@@ -6951,6 +7580,25 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x5d
 	.long	.LASF487
 	.byte	0x23
+=======
+	.byte	0x8
+	.byte	0xfb
+	.byte	0xb
+	.long	0x4c9a
+	.uleb128 0x22
+	.byte	0x8
+	.value	0x104
+	.byte	0xb
+	.long	0x4cb6
+	.uleb128 0x22
+	.byte	0x8
+	.value	0x105
+	.byte	0xb
+	.long	0x4cde
+	.uleb128 0x64
+	.long	.LASF499
+	.byte	0x24
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x23
 	.uleb128 0x3
 	.byte	0x24
@@ -7254,6 +7902,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x54ff
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x3e
 	.long	.LASF512
 	.byte	0x26
@@ -7314,6 +7963,21 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x27
 	.value	0x2fe
 	.long	0x443a
+=======
+	.uleb128 0x6b
+	.long	.LASF537
+	.byte	0x8
+	.byte	0x28
+	.value	0x310
+	.byte	0xb
+	.long	0x3d1b
+	.uleb128 0x6c
+	.long	.LASF538
+	.byte	0x28
+	.value	0x313
+	.byte	0x11
+	.long	0x47a2
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0
 	.byte	0x2
 	.uleb128 0x34
@@ -7345,11 +8009,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.long	0x584b
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x4d
 	.long	.LASF526
 	.byte	0x27
 	.value	0x30e
 	.long	.LASF528
+=======
+	.uleb128 0x50
+	.long	.LASF539
+	.byte	0x28
+	.value	0x323
+	.byte	0x7
+	.long	.LASF541
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1
 	.long	0x3879
 	.long	0x3884
@@ -7524,6 +8197,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x3f
 	.byte	0
 	.uleb128 0xa
+<<<<<<< HEAD
 	.long	0x3807
 	.uleb128 0x63
 	.long	.LASF550
@@ -7536,6 +8210,22 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x27
 	.value	0x2fe
 	.long	0x411e
+=======
+	.long	0x3ae1
+	.uleb128 0x6b
+	.long	.LASF563
+	.byte	0x8
+	.byte	0x28
+	.value	0x310
+	.byte	0xb
+	.long	0x3f5a
+	.uleb128 0x6c
+	.long	.LASF538
+	.byte	0x28
+	.value	0x313
+	.byte	0x11
+	.long	0x4458
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0
 	.byte	0x2
 	.uleb128 0x34
@@ -7544,11 +8234,25 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x306
 	.long	0x3385
 	.byte	0x1
+<<<<<<< HEAD
 	.uleb128 0x34
 	.long	.LASF12
 	.byte	0x27
 	.value	0x307
 	.long	0x339b
+=======
+	.long	0x3d53
+	.long	0x3d59
+	.uleb128 0x2
+	.long	0x5db6
+	.byte	0
+	.uleb128 0x50
+	.long	.LASF539
+	.byte	0x28
+	.value	0x323
+	.byte	0x7
+	.long	.LASF565
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1
 	.uleb128 0x34
 	.long	.LASF6
@@ -7970,9 +8674,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x443a
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x62
 	.long	.LASF578
 	.byte	0x28
+=======
+	.uleb128 0x6a
+	.long	.LASF591
+	.byte	0x29
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x98
 	.long	.LASF579
 	.long	0x48f7
@@ -8060,9 +8770,16 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x8
 	.byte	0x2c
 	.byte	0xe
+<<<<<<< HEAD
 	.long	.LASF794
 	.long	0x3f3d
 	.uleb128 0x5a
+=======
+	.byte	0x1
+	.long	.LASF820
+	.long	0x426c
+	.uleb128 0x60
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x4
 	.byte	0x2c
 	.byte	0x11
@@ -8434,6 +9151,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4155
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x51
 	.long	.LASF782
 	.byte	0x31
@@ -8442,6 +9160,17 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x6
 	.long	.LASF642
 	.byte	0x31
+=======
+	.uleb128 0x55
+	.long	.LASF808
+	.byte	0x32
+	.value	0x2dd
+	.byte	0xf
+	.long	0x4216
+	.uleb128 0x8
+	.long	.LASF655
+	.byte	0x32
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.value	0x133
 	.long	0x3e91
 	.long	0x425e
@@ -9209,6 +9938,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF710
 	.uleb128 0x8
 	.byte	0x8
+<<<<<<< HEAD
 	.long	0x20b0
 	.uleb128 0x83
 	.long	0x20d8
@@ -9219,6 +9949,19 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x495c
 	.uleb128 0x4e
 	.byte	0x11
+=======
+	.long	0x2216
+	.uleb128 0x8d
+	.long	0x2240
+	.uleb128 0x51
+	.long	.LASF731
+	.byte	0x10
+	.byte	0x38
+	.byte	0xb
+	.long	0x4da5
+	.uleb128 0x66
+	.byte	0x10
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x3a
 	.long	0x2126
 	.byte	0
@@ -9638,9 +10381,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x411e
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x52
 	.long	.LASF783
 	.byte	0x37
+=======
+	.uleb128 0x56
+	.long	.LASF809
+	.byte	0x38
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x7d
 	.long	0x4cd5
 	.uleb128 0x8
@@ -9746,7 +10495,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x3c
 	.long	0x3f59
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x53
+=======
+	.uleb128 0x57
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"rem"
 	.byte	0x3c
 	.byte	0x3d
@@ -9770,7 +10523,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x44
 	.long	0x46ba
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x53
+=======
+	.uleb128 0x57
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"rem"
 	.byte	0x3c
 	.byte	0x45
@@ -9794,7 +10551,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x4e
 	.long	0x489f
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x53
+=======
+	.uleb128 0x57
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"rem"
 	.byte	0x3c
 	.byte	0x4f
@@ -9889,7 +10650,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4e2b
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x65
+=======
+	.uleb128 0x6d
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"div"
 	.byte	0x3c
 	.value	0x351
@@ -9979,9 +10744,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x3f59
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x51
 	.long	.LASF817
 	.byte	0x3c
+=======
+	.uleb128 0x55
+	.long	.LASF841
+	.byte	0x3d
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.value	0x1c5
 	.long	0x3f59
 	.uleb128 0x37
@@ -10153,6 +10924,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x8
 	.byte	0
 	.uleb128 0x5
+<<<<<<< HEAD
 	.long	.LASF834
 	.byte	0x3d
 	.byte	0x1e
@@ -10173,6 +10945,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0xa1
 	.long	0x51a6
 	.byte	0
+=======
+	.long	.LASF859
+	.byte	0x3e
+	.byte	0xe
+	.byte	0x3
+	.long	0x5657
+	.uleb128 0x93
+	.long	.LASF1026
+	.byte	0x30
+	.byte	0x2b
+	.byte	0xe
+	.uleb128 0x58
+	.long	.LASF860
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x7
 	.long	.LASF837
 	.byte	0x2f
@@ -10199,7 +10985,21 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x3e9c
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x8
+=======
+	.uleb128 0x7
+	.byte	0x8
+	.long	0x568b
+	.uleb128 0x58
+	.long	.LASF861
+	.uleb128 0x7
+	.byte	0x8
+	.long	0x56bb
+	.uleb128 0x58
+	.long	.LASF862
+	.uleb128 0x7
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x8
 	.long	0x516d
 	.uleb128 0x35
@@ -10440,11 +11240,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x527d
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x51
 	.long	.LASF865
 	.byte	0x3e
 	.value	0x1e4
 	.long	0x3f59
+=======
+	.uleb128 0x55
+	.long	.LASF886
+	.byte	0x3f
+	.value	0x1ec
+	.byte	0xc
+	.long	0x4288
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x37
 	.long	.LASF866
 	.byte	0x3e
@@ -10506,11 +11315,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x3e91
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x52
 	.long	.LASF872
 	.byte	0x3e
 	.byte	0x9f
 	.long	0x527d
+=======
+	.uleb128 0x56
+	.long	.LASF893
+	.byte	0x3f
+	.byte	0xad
+	.byte	0xe
+	.long	0x56fe
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xb
 	.long	.LASF873
 	.byte	0x3e
@@ -10686,8 +11504,49 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x3
 	.byte	0x43
 	.byte	0x34
+<<<<<<< HEAD
 	.long	0x4df0
 	.uleb128 0x65
+=======
+	.byte	0xc
+	.long	0x52e8
+	.uleb128 0x3
+	.byte	0x44
+	.byte	0x36
+	.byte	0xc
+	.long	0x2e7f
+	.uleb128 0x3
+	.byte	0x44
+	.byte	0x36
+	.byte	0xc
+	.long	0x2e99
+	.uleb128 0x3
+	.byte	0x44
+	.byte	0x36
+	.byte	0xc
+	.long	0x2eb3
+	.uleb128 0x3
+	.byte	0x44
+	.byte	0x36
+	.byte	0xc
+	.long	0x2ecd
+	.uleb128 0x3
+	.byte	0x44
+	.byte	0x36
+	.byte	0xc
+	.long	0x2ee7
+	.uleb128 0x3
+	.byte	0x44
+	.byte	0x36
+	.byte	0xc
+	.long	0x2f01
+	.uleb128 0x3
+	.byte	0x44
+	.byte	0x36
+	.byte	0xc
+	.long	0x2f1b
+	.uleb128 0x6d
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"abs"
 	.byte	0x3c
 	.value	0x345
@@ -10780,17 +11639,27 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF883
 	.byte	0x4
 	.byte	0x2a
+<<<<<<< HEAD
 	.long	0x56cd
 	.uleb128 0x66
 	.long	0x3e7c
 	.long	0x56d9
 	.uleb128 0x67
+=======
+	.byte	0xf
+	.long	0x5c3e
+	.uleb128 0x6e
+	.long	0x41a1
+	.long	0x5c4a
+	.uleb128 0x6f
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x7
 	.byte	0
 	.uleb128 0x5
 	.long	.LASF884
 	.byte	0x4
 	.byte	0x37
+<<<<<<< HEAD
 	.long	0x56e4
 	.uleb128 0x66
 	.long	0x3e7c
@@ -10801,6 +11670,19 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x52
 	.long	.LASF885
 	.byte	0x3a
+=======
+	.byte	0xf
+	.long	0x5c56
+	.uleb128 0x6e
+	.long	0x41a1
+	.long	0x5c62
+	.uleb128 0x6f
+	.byte	0x7
+	.byte	0
+	.uleb128 0x56
+	.long	.LASF906
+	.byte	0x3b
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x48
 	.long	0x4ceb
 	.uleb128 0xb
@@ -11054,11 +11936,21 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x2e4b
 	.uleb128 0x16
 	.long	.LASF923
+<<<<<<< HEAD
 	.long	0x2e60
 	.uleb128 0x16
 	.long	.LASF924
 	.long	0x2f24
 	.uleb128 0x16
+=======
+	.long	0x3929
+	.byte	0x1f
+	.uleb128 0x59
+	.long	.LASF924
+	.long	0x3935
+	.long	0x7fffffff
+	.uleb128 0x5a
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.long	.LASF925
 	.long	0x2f39
 	.uleb128 0x41
@@ -11089,6 +11981,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x3147
 	.uleb128 0x41
 	.long	.LASF934
+<<<<<<< HEAD
 	.long	0x30b4
 	.value	0x3e8
 	.uleb128 0x16
@@ -11123,6 +12016,138 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF999
 	.quad	.LFB5965
 	.quad	.LFE5965-.LFB5965
+=======
+	.long	0x40cf
+	.byte	0x1
+	.uleb128 0x1b
+	.long	.LASF935
+	.long	0x40db
+	.byte	0xf
+	.uleb128 0x3e
+	.long	.LASF936
+	.long	0x40e7
+	.value	0x7fff
+	.uleb128 0x5a
+	.long	.LASF937
+	.long	0x40f3
+	.sleb128 -32768
+	.uleb128 0x1b
+	.long	.LASF938
+	.long	0x4116
+	.byte	0x1
+	.uleb128 0x1b
+	.long	.LASF939
+	.long	0x4122
+	.byte	0x3f
+	.uleb128 0x97
+	.long	.LASF940
+	.long	0x412e
+	.quad	0x7fffffffffffffff
+	.uleb128 0x5a
+	.long	.LASF941
+	.long	0x413a
+	.sleb128 -9223372036854775808
+	.uleb128 0x13
+	.long	.LASF942
+	.long	0x30da
+	.uleb128 0x13
+	.long	.LASF943
+	.long	0x30e8
+	.uleb128 0x1b
+	.long	.LASF944
+	.long	0x2fe2
+	.byte	0x1
+	.uleb128 0x59
+	.long	.LASF945
+	.long	0x305c
+	.long	0x3b9aca00
+	.uleb128 0x13
+	.long	.LASF946
+	.long	0x311f
+	.uleb128 0x13
+	.long	.LASF947
+	.long	0x3130
+	.uleb128 0x13
+	.long	.LASF948
+	.long	0x3164
+	.uleb128 0x13
+	.long	.LASF949
+	.long	0x3172
+	.uleb128 0x13
+	.long	.LASF950
+	.long	0x31a3
+	.uleb128 0x13
+	.long	.LASF951
+	.long	0x31b2
+	.uleb128 0x13
+	.long	.LASF952
+	.long	0x325f
+	.uleb128 0x13
+	.long	.LASF953
+	.long	0x326d
+	.uleb128 0x3e
+	.long	.LASF954
+	.long	0x31e3
+	.value	0xe10
+	.uleb128 0x13
+	.long	.LASF955
+	.long	0x32a0
+	.uleb128 0x13
+	.long	.LASF956
+	.long	0x32ae
+	.uleb128 0x13
+	.long	.LASF957
+	.long	0x3359
+	.uleb128 0x13
+	.long	.LASF958
+	.long	0x3367
+	.uleb128 0x1b
+	.long	.LASF959
+	.long	0x32de
+	.byte	0x3c
+	.uleb128 0x13
+	.long	.LASF960
+	.long	0x3413
+	.uleb128 0x13
+	.long	.LASF961
+	.long	0x3421
+	.uleb128 0x3e
+	.long	.LASF962
+	.long	0x3397
+	.value	0x3e8
+	.uleb128 0x13
+	.long	.LASF963
+	.long	0x3454
+	.uleb128 0x13
+	.long	.LASF964
+	.long	0x3463
+	.uleb128 0x13
+	.long	.LASF965
+	.long	0x3512
+	.uleb128 0x13
+	.long	.LASF966
+	.long	0x3520
+	.uleb128 0x59
+	.long	.LASF967
+	.long	0x3494
+	.long	0xf4240
+	.uleb128 0x13
+	.long	.LASF968
+	.long	0x3557
+	.uleb128 0x13
+	.long	.LASF969
+	.long	0x3568
+	.uleb128 0x98
+	.long	.LASF1027
+	.quad	.LFB6365
+	.quad	.LFE6365-.LFB6365
+	.uleb128 0x1
+	.byte	0x9c
+	.uleb128 0x99
+	.long	.LASF1028
+	.quad	.LFB6364
+	.quad	.LFE6364-.LFB6364
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x5a67
@@ -11278,9 +12303,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0xcf
 	.long	0x443a
 	.uleb128 0x1
+<<<<<<< HEAD
 	.long	0x20ed
 	.uleb128 0x56
 	.long	.LASF950
+=======
+	.long	0x2257
+	.uleb128 0x5b
+	.long	.LASF978
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x7
 	.byte	0xd7
 	.long	0x107
@@ -11306,9 +12337,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0xcf
 	.long	0x411e
 	.uleb128 0x1
+<<<<<<< HEAD
 	.long	0x20ed
 	.uleb128 0x56
 	.long	.LASF950
+=======
+	.long	0x2257
+	.uleb128 0x5b
+	.long	.LASF978
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x7
 	.byte	0xd7
 	.long	0x107
@@ -11721,24 +12758,39 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LFE5471-.LFB5471
 	.uleb128 0x1
 	.byte	0x9c
+<<<<<<< HEAD
 	.long	0x616e
 	.uleb128 0x4c
 	.long	.LASF968
+=======
+	.long	0x6783
+	.uleb128 0x4e
+	.long	.LASF997
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x2
 	.byte	0x29
 	.long	0x3f59
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -180
+<<<<<<< HEAD
 	.uleb128 0x4c
 	.long	.LASF969
+=======
+	.uleb128 0x4e
+	.long	.LASF998
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x2
 	.byte	0x29
 	.long	0x5006
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -192
+<<<<<<< HEAD
 	.uleb128 0x20
+=======
+	.uleb128 0x27
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"N"
 	.byte	0x2
 	.byte	0x30
@@ -11746,6 +12798,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -120
+<<<<<<< HEAD
 	.uleb128 0x20
 	.string	"a"
 	.byte	0x2
@@ -11775,6 +12828,40 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LBE18-.LBB18
 	.long	0x60bd
 	.uleb128 0x20
+=======
+	.uleb128 0x27
+	.string	"a"
+	.byte	0x2
+	.byte	0x2d
+	.byte	0xc
+	.long	0x6783
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -144
+	.uleb128 0x27
+	.string	"b"
+	.byte	0x2
+	.byte	0x2e
+	.byte	0xc
+	.long	0x6783
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -136
+	.uleb128 0x27
+	.string	"c"
+	.byte	0x2
+	.byte	0x2f
+	.byte	0xc
+	.long	0x6783
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -128
+	.uleb128 0x5c
+	.quad	.LBB17
+	.quad	.LBE17-.LBB17
+	.long	0x66cc
+	.uleb128 0x27
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"i"
 	.byte	0x2
 	.byte	0x39
@@ -11783,7 +12870,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x91
 	.sleb128 -160
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x58
+=======
+	.uleb128 0x5d
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.long	.Ldebug_ranges0+0
 	.long	0x60d6
 	.uleb128 0x43
@@ -11795,11 +12886,19 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x91
 	.sleb128 -80
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x57
 	.quad	.LBB20
 	.quad	.LBE20-.LBB20
 	.long	0x60f9
 	.uleb128 0x20
+=======
+	.uleb128 0x5c
+	.quad	.LBB19
+	.quad	.LBE19-.LBB19
+	.long	0x670a
+	.uleb128 0x27
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"i"
 	.byte	0x2
 	.byte	0x45
@@ -11808,7 +12907,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x91
 	.sleb128 -156
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x58
+=======
+	.uleb128 0x5d
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.long	.Ldebug_ranges0+0x30
 	.long	0x6112
 	.uleb128 0x43
@@ -11820,11 +12923,19 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x91
 	.sleb128 -80
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x57
 	.quad	.LBB22
 	.quad	.LBE22-.LBB22
 	.long	0x6135
 	.uleb128 0x20
+=======
+	.uleb128 0x5c
+	.quad	.LBB21
+	.quad	.LBE21-.LBB21
+	.long	0x6748
+	.uleb128 0x27
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"i"
 	.byte	0x2
 	.byte	0x51
@@ -11833,11 +12944,19 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x91
 	.sleb128 -152
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x58
 	.long	.Ldebug_ranges0+0x60
 	.long	0x614e
 	.uleb128 0x43
 	.long	.LASF970
+=======
+	.uleb128 0x5d
+	.long	.Ldebug_ranges0+0x60
+	.long	0x6762
+	.uleb128 0x40
+	.long	.LASF1000
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x2
 	.byte	0x59
 	.long	0x57c9
@@ -11845,6 +12964,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x91
 	.sleb128 -80
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x44
 	.quad	.LBB24
 	.quad	.LBE24-.LBB24
@@ -11853,6 +12973,17 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x2
 	.byte	0x5d
 	.long	0x3f59
+=======
+	.uleb128 0x4f
+	.quad	.LBB23
+	.quad	.LBE23-.LBB23
+	.uleb128 0x27
+	.string	"i"
+	.byte	0x2
+	.byte	0x58
+	.byte	0xe
+	.long	0x4288
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -148
@@ -11860,9 +12991,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.uleb128 0x8
 	.byte	0x8
+<<<<<<< HEAD
 	.long	0x3e7c
 	.uleb128 0x59
 	.long	.LASF971
+=======
+	.long	0x41a1
+	.uleb128 0x5e
+	.long	.LASF1001
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x2
 	.byte	0x19
 	.long	.LASF972
@@ -11870,6 +13007,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LFE5470-.LFB5470
 	.uleb128 0x1
 	.byte	0x9c
+<<<<<<< HEAD
 	.long	0x6230
 	.uleb128 0x26
 	.string	"a"
@@ -11896,6 +13034,37 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x76
 	.sleb128 -152
 	.uleb128 0x26
+=======
+	.long	0x680e
+	.uleb128 0x24
+	.string	"a"
+	.byte	0x2
+	.byte	0x19
+	.byte	0x1e
+	.long	0x6783
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 -24
+	.uleb128 0x24
+	.string	"b"
+	.byte	0x2
+	.byte	0x19
+	.byte	0x28
+	.long	0x6783
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 -32
+	.uleb128 0x24
+	.string	"c"
+	.byte	0x2
+	.byte	0x19
+	.byte	0x32
+	.long	0x6783
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 -40
+	.uleb128 0x24
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"N"
 	.byte	0x2
 	.byte	0x19
@@ -11907,6 +13076,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF973
 	.byte	0x2
 	.byte	0x1b
+<<<<<<< HEAD
 	.long	0x4a8f
 	.uleb128 0x3
 	.byte	0x76
@@ -11915,6 +13085,17 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LBB16
 	.quad	.LBE16-.LBB16
 	.uleb128 0x20
+=======
+	.byte	0x14
+	.long	0x4f4e
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 -8
+	.uleb128 0x4f
+	.quad	.LBB16
+	.quad	.LBE16-.LBB16
+	.uleb128 0x27
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"i"
 	.byte	0x2
 	.byte	0x1e
@@ -11951,9 +13132,14 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.sleb128 -48
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.byte	0
 	.uleb128 0x59
 	.long	.LASF974
+=======
+	.uleb128 0x5e
+	.long	.LASF1004
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x2
 	.byte	0xf
 	.long	.LASF975
@@ -11961,12 +13147,22 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LFE5469-.LFB5469
 	.uleb128 0x1
 	.byte	0x9c
+<<<<<<< HEAD
 	.long	0x6316
 	.uleb128 0x26
 	.string	"a"
 	.byte	0x2
 	.byte	0xf
 	.long	0x616e
+=======
+	.long	0x68f9
+	.uleb128 0x24
+	.string	"a"
+	.byte	0x2
+	.byte	0xf
+	.byte	0x18
+	.long	0x6783
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x3
 	.byte	0x76
 	.sleb128 -184
@@ -11974,7 +13170,12 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.string	"b"
 	.byte	0x2
 	.byte	0xf
+<<<<<<< HEAD
 	.long	0x616e
+=======
+	.byte	0x22
+	.long	0x6783
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x3
 	.byte	0x76
 	.sleb128 -192
@@ -11982,7 +13183,12 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.string	"c"
 	.byte	0x2
 	.byte	0xf
+<<<<<<< HEAD
 	.long	0x616e
+=======
+	.byte	0x2c
+	.long	0x6783
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x3
 	.byte	0x76
 	.sleb128 -200
@@ -12000,28 +13206,79 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x11
 	.long	0x4a8f
 	.uleb128 0x3
+<<<<<<< HEAD
 	.byte	0x76
 	.sleb128 -160
 	.uleb128 0x44
 	.quad	.LBB11
 	.quad	.LBE11-.LBB11
 	.uleb128 0x20
+=======
+	.byte	0x77
+	.sleb128 -72
+	.uleb128 0x4f
+	.quad	.LBB11
+	.quad	.LBE11-.LBB11
+	.uleb128 0x27
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"i"
 	.byte	0x2
 	.byte	0x13
 	.long	0x3f59
 	.uleb128 0x3
+<<<<<<< HEAD
 	.byte	0x76
 	.sleb128 -164
 	.uleb128 0x92
 	.long	0x6471
+=======
+	.byte	0x77
+	.sleb128 -76
+	.uleb128 0x9c
+	.long	0x6a54
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.quad	.LBB12
 	.quad	.LBE12-.LBB12
 	.byte	0x2
 	.byte	0x15
+<<<<<<< HEAD
 	.long	0x62e9
 	.uleb128 0x2f
 	.long	0x649c
+=======
+	.byte	0x18
+	.long	0x68cd
+	.uleb128 0x30
+	.long	0x6a82
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 40
+	.uleb128 0x30
+	.long	0x6a76
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 8
+	.uleb128 0x30
+	.long	0x6a6a
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 -24
+	.byte	0
+	.uleb128 0x9d
+	.long	0x6a8f
+	.quad	.LBB14
+	.quad	.LBE14-.LBB14
+	.byte	0x2
+	.byte	0x15
+	.byte	0x18
+	.uleb128 0x30
+	.long	0x6aaf
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 -56
+	.uleb128 0x30
+	.long	0x6aa2
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 -48
@@ -12054,9 +13311,14 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.sleb128 -152
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.byte	0
 	.uleb128 0x59
 	.long	.LASF976
+=======
+	.uleb128 0x5e
+	.long	.LASF1006
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x2
 	.byte	0x7
 	.long	.LASF977
@@ -12064,12 +13326,22 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LFE5468-.LFB5468
 	.uleb128 0x1
 	.byte	0x9c
+<<<<<<< HEAD
 	.long	0x6386
 	.uleb128 0x26
 	.string	"a"
 	.byte	0x2
 	.byte	0x7
 	.long	0x616e
+=======
+	.long	0x696f
+	.uleb128 0x24
+	.string	"a"
+	.byte	0x2
+	.byte	0x7
+	.byte	0x13
+	.long	0x6783
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
@@ -12077,7 +13349,12 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.string	"b"
 	.byte	0x2
 	.byte	0x7
+<<<<<<< HEAD
 	.long	0x616e
+=======
+	.byte	0x1d
+	.long	0x6783
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
@@ -12085,7 +13362,12 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.string	"c"
 	.byte	0x2
 	.byte	0x7
+<<<<<<< HEAD
 	.long	0x616e
+=======
+	.byte	0x27
+	.long	0x6783
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -56
@@ -12097,10 +13379,17 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
+<<<<<<< HEAD
 	.uleb128 0x44
 	.quad	.LBB10
 	.quad	.LBE10-.LBB10
 	.uleb128 0x20
+=======
+	.uleb128 0x4f
+	.quad	.LBB10
+	.quad	.LBE10-.LBB10
+	.uleb128 0x27
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"i"
 	.byte	0x2
 	.byte	0x9
@@ -12110,25 +13399,42 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.sleb128 -20
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x23
 	.long	0x580c
 	.byte	0x2
 	.long	0x6394
 	.long	0x63b5
+=======
+	.uleb128 0x21
+	.long	0x5d70
+	.long	0x697d
+	.byte	0x2
+	.long	0x699f
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x11
 	.long	.LASF949
 	.long	0x582e
 	.uleb128 0x11
+<<<<<<< HEAD
 	.long	.LASF956
 	.long	0x3f61
 	.uleb128 0x94
 	.uleb128 0x56
 	.long	.LASF978
+=======
+	.long	.LASF985
+	.long	0x4290
+	.uleb128 0x9e
+	.uleb128 0x5b
+	.long	.LASF1008
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x1
 	.byte	0xe
 	.long	0x3e83
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x69
 	.long	0x6386
 	.long	.LASF980
@@ -12156,16 +13462,52 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LBE9-.LBB9
 	.uleb128 0x98
 	.long	0x63a8
+=======
+	.uleb128 0x70
+	.long	0x696f
+	.long	.LASF1010
+	.long	0x69c2
+	.quad	.LFB5830
+	.quad	.LFE5830-.LFB5830
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x69fc
+	.uleb128 0x30
+	.long	0x697d
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -40
+	.uleb128 0x9f
+	.long	0x698f
+	.long	0x69db
+	.uleb128 0xa0
+	.long	0x6991
+	.byte	0
+	.uleb128 0xa1
+	.long	0x698f
+	.quad	.LBB9
+	.quad	.LBE9-.LBB9
+	.uleb128 0xa2
+	.long	0x6991
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x23
 	.long	0x57ed
 	.byte	0x2
 	.long	0x6424
 	.long	0x6439
+=======
+	.uleb128 0x21
+	.long	0x5d50
+	.long	0x6a0a
+	.byte	0x2
+	.long	0x6a20
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x11
 	.long	.LASF949
 	.long	0x582e
@@ -12175,6 +13517,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x7
 	.long	0x5567
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x69
 	.long	0x6416
 	.long	.LASF981
@@ -12192,19 +13535,47 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.sleb128 -24
 	.uleb128 0x2f
 	.long	0x642d
+=======
+	.uleb128 0x70
+	.long	0x69fc
+	.long	.LASF1011
+	.long	0x6a43
+	.quad	.LFB5827
+	.quad	.LFE5827-.LFB5827
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x6a54
+	.uleb128 0x30
+	.long	0x6a0a
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -24
+	.uleb128 0x30
+	.long	0x6a13
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -32
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x99
 	.long	.LASF982
+=======
+	.uleb128 0xa3
+	.long	.LASF1012
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x3
 	.byte	0x3f
 	.long	.LASF983
 	.long	0x56d9
 	.byte	0x3
+<<<<<<< HEAD
 	.long	0x64a8
 	.uleb128 0x2e
+=======
+	.long	0x6a8f
+	.uleb128 0x2f
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"__A"
 	.byte	0x3
 	.byte	0x3f
@@ -12220,12 +13591,18 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x3f
 	.long	0x56d9
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x9a
 	.long	.LASF984
+=======
+	.uleb128 0xa4
+	.long	.LASF1014
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.byte	0x4
 	.value	0x36e
 	.long	.LASF985
 	.byte	0x3
+<<<<<<< HEAD
 	.long	0x64d3
 	.uleb128 0x42
 	.string	"__P"
@@ -12233,14 +13610,30 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x36e
 	.long	0x616e
 	.uleb128 0x42
+=======
+	.long	0x6abd
+	.uleb128 0x3f
+	.string	"__P"
+	.byte	0x4
+	.value	0x36e
+	.byte	0x19
+	.long	0x6783
+	.uleb128 0x3f
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"__A"
 	.byte	0x4
 	.value	0x36e
 	.long	0x56d9
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x9b
 	.long	0x21d7
 	.uleb128 0x42
+=======
+	.uleb128 0xa5
+	.long	0x233a
+	.uleb128 0x3f
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.string	"__s"
 	.byte	0x12
 	.value	0x13a
@@ -12808,7 +14201,72 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x28
+=======
+	.uleb128 0x27
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x28
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0xe
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x29
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0xe
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x2a
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -13333,7 +14791,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x4d
+=======
+	.uleb128 0x4f
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.byte	0
+	.byte	0
+	.uleb128 0x50
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -13358,9 +14829,17 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x4e
 	.uleb128 0x3a
 	.byte	0
+=======
+	.uleb128 0x51
+	.uleb128 0x39
+	.byte	0x1
+	.uleb128 0x3
+	.uleb128 0xe
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -13369,7 +14848,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x4f
+=======
+	.uleb128 0x52
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2
 	.byte	0
 	.uleb128 0x3
@@ -13378,7 +14861,26 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x50
+=======
+	.uleb128 0x53
+	.uleb128 0x39
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x89
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x54
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x30
 	.byte	0
 	.uleb128 0x3
@@ -13391,7 +14893,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x51
+=======
+	.uleb128 0x55
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -13408,7 +14914,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x52
+=======
+	.uleb128 0x56
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -13425,7 +14935,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x53
+=======
+	.uleb128 0x57
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -13440,7 +14954,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x54
+=======
+	.uleb128 0x58
+	.uleb128 0x13
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3c
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x59
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -13451,7 +14978,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xd
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x55
+=======
+	.uleb128 0x5a
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -13462,7 +14993,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x56
+=======
+	.uleb128 0x5b
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -13475,7 +15010,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x57
+=======
+	.uleb128 0x5c
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
@@ -13486,7 +15025,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x58
+=======
+	.uleb128 0x5d
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x55
@@ -13495,7 +15038,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x59
+=======
+	.uleb128 0x5e
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -13520,7 +15067,28 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x5a
+=======
+	.uleb128 0x5f
+	.uleb128 0x39
+	.byte	0x1
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x89
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x60
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x17
 	.byte	0x1
 	.uleb128 0xb
@@ -13533,7 +15101,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x5b
+=======
+	.uleb128 0x61
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -13556,7 +15128,24 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x5c
+=======
+	.uleb128 0x62
+	.uleb128 0x39
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x63
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x3
@@ -13569,7 +15158,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x5d
+=======
+	.uleb128 0x64
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -13580,7 +15173,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x5e
+=======
+	.uleb128 0x65
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -13599,6 +15196,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x5f
 	.uleb128 0x2e
 	.byte	0x1
@@ -13606,6 +15204,9 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.uleb128 0x3
 	.uleb128 0xe
+=======
+	.uleb128 0x66
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -13639,7 +15240,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x61
+=======
+	.uleb128 0x67
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -13656,7 +15261,33 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x62
+=======
+	.uleb128 0x68
+	.uleb128 0x30
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1c
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0x69
+	.uleb128 0x30
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1c
+	.uleb128 0x5
+	.byte	0
+	.byte	0
+	.uleb128 0x6a
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -13675,7 +15306,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x63
+=======
+	.uleb128 0x6b
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -13690,7 +15325,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x64
+=======
+	.uleb128 0x6c
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -13707,7 +15346,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x65
+=======
+	.uleb128 0x6d
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -13726,7 +15369,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x66
+=======
+	.uleb128 0x6e
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x2107
@@ -13737,13 +15384,18 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x67
+=======
+	.uleb128 0x6f
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x2f
 	.uleb128 0xb
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x68
 	.uleb128 0x5
 	.byte	0
@@ -13758,6 +15410,9 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.byte	0
 	.uleb128 0x69
+=======
+	.uleb128 0x70
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -14376,7 +16031,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x92
+=======
+	.uleb128 0x9c
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -14393,7 +16052,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x93
+=======
+	.uleb128 0x9d
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -14408,12 +16071,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x94
+=======
+	.uleb128 0x9e
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xb
 	.byte	0x1
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x95
+=======
+	.uleb128 0x9f
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x31
@@ -14422,14 +16093,22 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x96
+=======
+	.uleb128 0xa0
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x97
+=======
+	.uleb128 0xa1
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x31
@@ -14440,7 +16119,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x7
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x98
+=======
+	.uleb128 0xa2
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -14449,7 +16132,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x99
+=======
+	.uleb128 0xa3
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -14472,7 +16159,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x9a
+=======
+	.uleb128 0xa4
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -14493,7 +16184,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+<<<<<<< HEAD
 	.uleb128 0x9b
+=======
+	.uleb128 0xa5
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -14519,6 +16214,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
+<<<<<<< HEAD
 	.quad	.LBB19
 	.quad	.LBE19
 	.quad	.LBB25
@@ -14535,6 +16231,24 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LBE23
 	.quad	.LBB27
 	.quad	.LBE27
+=======
+	.quad	.LBB18
+	.quad	.LBE18
+	.quad	.LBB24
+	.quad	.LBE24
+	.quad	0
+	.quad	0
+	.quad	.LBB20
+	.quad	.LBE20
+	.quad	.LBB25
+	.quad	.LBE25
+	.quad	0
+	.quad	0
+	.quad	.LBB22
+	.quad	.LBE22
+	.quad	.LBB26
+	.quad	.LBE26
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
 	.quad	0
 	.quad	0
 	.quad	.Ltext0

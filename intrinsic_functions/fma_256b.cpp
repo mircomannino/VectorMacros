@@ -80,9 +80,13 @@ int main(int argc, char* argv[])
 
     for(auto i = 0; i < N; i++)
     {
-        a[i] = 2.0;
+        a[i] = 3.0;
         b[i] = 8.0;
+<<<<<<< HEAD
         c[i] = 1.0;
+=======
+        c[i] = 2.0;
+>>>>>>> 2f73e60d01e461d4695b52229be46e7679903b19
     }
 
     {
