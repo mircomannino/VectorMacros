@@ -12,9 +12,8 @@ _ZStL19piecewise_construct:
 	.weak	_ZN5TimerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 	.type	_ZN5TimerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, @function
 _ZN5TimerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
-.LFB5827:
+.LFB5463:
 	.cfi_startproc
-	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -29,14 +28,15 @@ _ZN5TimerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1ERKS4_@PLT
 	call	clock@PLT
-	movq	-8(%rbp), %rdx
-	movq	%rax, 32(%rdx)
+	movq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	movq	%rdx, 32(%rax)
 	nop
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE5827:
+.LFE5463:
 	.size	_ZN5TimerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, .-_ZN5TimerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 	.weak	_ZN5TimerC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 	.set	_ZN5TimerC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE,_ZN5TimerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
@@ -50,11 +50,10 @@ _ZN5TimerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:
 	.weak	_ZN5TimerD2Ev
 	.type	_ZN5TimerD2Ev, @function
 _ZN5TimerD2Ev:
-.LFB5830:
+.LFB5466:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA5830
-	endbr64
+	.cfi_lsda 0x1b,.LLSDA5466
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -63,9 +62,11 @@ _ZN5TimerD2Ev:
 	subq	$32, %rsp
 	movq	%rdi, -24(%rbp)
 	call	clock@PLT
-	movq	-24(%rbp), %rdx
-	movq	32(%rdx), %rdx
-	subq	%rdx, %rax
+	movq	%rax, %rdx
+	movq	-24(%rbp), %rax
+	movq	32(%rax), %rax
+	subq	%rax, %rdx
+	movq	%rdx, %rax
 	cvtsi2sdq	%rax, %xmm0
 	movsd	.LC0(%rip), %xmm1
 	divsd	%xmm1, %xmm0
@@ -81,7 +82,7 @@ _ZN5TimerD2Ev:
 	movsd	-8(%rbp), %xmm1
 	movsd	.LC2(%rip), %xmm0
 	mulsd	%xmm1, %xmm0
-	cvttsd2sil	%xmm0, %eax
+	cvttsd2si	%xmm0, %eax
 	movl	%eax, %esi
 	movq	%rdx, %rdi
 	call	_ZNSolsEi@PLT
@@ -101,16 +102,16 @@ _ZN5TimerD2Ev:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE5830:
+.LFE5466:
 	.globl	__gxx_personality_v0
 	.section	.gcc_except_table._ZN5TimerD2Ev,"aG",@progbits,_ZN5TimerD5Ev,comdat
-.LLSDA5830:
+.LLSDA5466:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE5830-.LLSDACSB5830
-.LLSDACSB5830:
-.LLSDACSE5830:
+	.uleb128 .LLSDACSE5466-.LLSDACSB5466
+.LLSDACSB5466:
+.LLSDACSE5466:
 	.section	.text._ZN5TimerD2Ev,"axG",@progbits,_ZN5TimerD5Ev,comdat
 	.size	_ZN5TimerD2Ev, .-_ZN5TimerD2Ev
 	.weak	_ZN5TimerD1Ev
@@ -119,9 +120,8 @@ _ZN5TimerD2Ev:
 	.globl	_Z5naivePfS_S_m
 	.type	_Z5naivePfS_S_m, @function
 _Z5naivePfS_S_m:
-.LFB5832:
+.LFB5468:
 	.cfi_startproc
-	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -164,14 +164,13 @@ _Z5naivePfS_S_m:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE5832:
+.LFE5468:
 	.size	_Z5naivePfS_S_m, .-_Z5naivePfS_S_m
 	.globl	_Z10vectorizedPfS_S_m
 	.type	_Z10vectorizedPfS_S_m, @function
 _Z10vectorizedPfS_S_m:
-.LFB5833:
+.LFB5469:
 	.cfi_startproc
-	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -204,7 +203,6 @@ _Z10vectorizedPfS_S_m:
 	movq	-56(%rbp), %rax
 	movaps	-48(%rbp), %xmm0
 	movaps	%xmm0, (%rax)
-	nop
 	addl	$1, -68(%rbp)
 	addq	$16, -88(%rbp)
 	addq	$16, -96(%rbp)
@@ -216,14 +214,13 @@ _Z10vectorizedPfS_S_m:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE5833:
+.LFE5469:
 	.size	_Z10vectorizedPfS_S_m, .-_Z10vectorizedPfS_S_m
 	.globl	_Z16vectorized_macroPfS_S_m
 	.type	_Z16vectorized_macroPfS_S_m, @function
 _Z16vectorized_macroPfS_S_m:
-.LFB5834:
+.LFB5470:
 	.cfi_startproc
-	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -264,7 +261,7 @@ _Z16vectorized_macroPfS_S_m:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE5834:
+.LFE5470:
 	.size	_Z16vectorized_macroPfS_S_m, .-_Z16vectorized_macroPfS_S_m
 	.section	.rodata
 	.align 8
@@ -280,11 +277,10 @@ _Z16vectorized_macroPfS_S_m:
 	.globl	main
 	.type	main, @function
 main:
-.LFB5835:
+.LFB5471:
 	.cfi_startproc
 	.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
-	.cfi_lsda 0x1b,.LLSDA5835
-	endbr64
+	.cfi_lsda 0x1b,.LLSDA5471
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -526,14 +522,12 @@ main:
 	je	.L32
 	jmp	.L39
 .L34:
-	endbr64
 	movq	%rax, %rbx
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
 	jmp	.L27
 .L33:
-	endbr64
 	movq	%rax, %rbx
 .L27:
 	leaq	-141(%rbp), %rax
@@ -544,14 +538,12 @@ main:
 .LEHB7:
 	call	_Unwind_Resume@PLT
 .L36:
-	endbr64
 	movq	%rax, %rbx
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
 	jmp	.L29
 .L35:
-	endbr64
 	movq	%rax, %rbx
 .L29:
 	leaq	-141(%rbp), %rax
@@ -561,14 +553,12 @@ main:
 	movq	%rax, %rdi
 	call	_Unwind_Resume@PLT
 .L38:
-	endbr64
 	movq	%rax, %rbx
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
 	jmp	.L31
 .L37:
-	endbr64
 	movq	%rax, %rbx
 .L31:
 	leaq	-141(%rbp), %rax
@@ -587,54 +577,53 @@ main:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE5835:
+.LFE5471:
 	.section	.gcc_except_table,"a",@progbits
-.LLSDA5835:
+.LLSDA5471:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE5835-.LLSDACSB5835
-.LLSDACSB5835:
-	.uleb128 .LEHB0-.LFB5835
+	.uleb128 .LLSDACSE5471-.LLSDACSB5471
+.LLSDACSB5471:
+	.uleb128 .LEHB0-.LFB5471
 	.uleb128 .LEHE0-.LEHB0
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB1-.LFB5835
+	.uleb128 .LEHB1-.LFB5471
 	.uleb128 .LEHE1-.LEHB1
-	.uleb128 .L33-.LFB5835
+	.uleb128 .L33-.LFB5471
 	.uleb128 0
-	.uleb128 .LEHB2-.LFB5835
+	.uleb128 .LEHB2-.LFB5471
 	.uleb128 .LEHE2-.LEHB2
-	.uleb128 .L34-.LFB5835
+	.uleb128 .L34-.LFB5471
 	.uleb128 0
-	.uleb128 .LEHB3-.LFB5835
+	.uleb128 .LEHB3-.LFB5471
 	.uleb128 .LEHE3-.LEHB3
-	.uleb128 .L35-.LFB5835
+	.uleb128 .L35-.LFB5471
 	.uleb128 0
-	.uleb128 .LEHB4-.LFB5835
+	.uleb128 .LEHB4-.LFB5471
 	.uleb128 .LEHE4-.LEHB4
-	.uleb128 .L36-.LFB5835
+	.uleb128 .L36-.LFB5471
 	.uleb128 0
-	.uleb128 .LEHB5-.LFB5835
+	.uleb128 .LEHB5-.LFB5471
 	.uleb128 .LEHE5-.LEHB5
-	.uleb128 .L37-.LFB5835
+	.uleb128 .L37-.LFB5471
 	.uleb128 0
-	.uleb128 .LEHB6-.LFB5835
+	.uleb128 .LEHB6-.LFB5471
 	.uleb128 .LEHE6-.LEHB6
-	.uleb128 .L38-.LFB5835
+	.uleb128 .L38-.LFB5471
 	.uleb128 0
-	.uleb128 .LEHB7-.LFB5835
+	.uleb128 .LEHB7-.LFB5471
 	.uleb128 .LEHE7-.LEHB7
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE5835:
+.LLSDACSE5471:
 	.text
 	.size	main, .-main
 	.type	_Z41__static_initialization_and_destruction_0ii, @function
 _Z41__static_initialization_and_destruction_0ii:
-.LFB6363:
+.LFB5964:
 	.cfi_startproc
-	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -660,13 +649,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE6363:
+.LFE5964:
 	.size	_Z41__static_initialization_and_destruction_0ii, .-_Z41__static_initialization_and_destruction_0ii
 	.type	_GLOBAL__sub_I__Z5naivePfS_S_m, @function
 _GLOBAL__sub_I__Z5naivePfS_S_m:
-.LFB6364:
+.LFB5965:
 	.cfi_startproc
-	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -679,7 +667,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE6364:
+.LFE5965:
 	.size	_GLOBAL__sub_I__Z5naivePfS_S_m, .-_GLOBAL__sub_I__Z5naivePfS_S_m
 	.section	.init_array,"aw"
 	.align 8
@@ -714,21 +702,5 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 DW.ref.__gxx_personality_v0:
 	.quad	__gxx_personality_v0
 	.hidden	__dso_handle
-	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04) 9.4.0"
+	.ident	"GCC: (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0"
 	.section	.note.GNU-stack,"",@progbits
-	.section	.note.gnu.property,"a"
-	.align 8
-	.long	 1f - 0f
-	.long	 4f - 1f
-	.long	 5
-0:
-	.string	 "GNU"
-1:
-	.align 8
-	.long	 0xc0000002
-	.long	 3f - 2f
-2:
-	.long	 0x3
-3:
-	.align 8
-4:

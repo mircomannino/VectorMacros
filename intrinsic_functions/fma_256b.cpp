@@ -29,7 +29,12 @@ void vectorized_macro(float* a, float* b, float* c, const uint64_t N)
 
     for(auto i = 0; i < nb_iter; i++, a+=8, b+=8, c+=8)
     {
-        VFMADD_256(*(__m256*)a, *(__m256*)b, *(__m256*)c);
+        // VFMADD_256(*(__m256*)a, *(__m256*)b, *(__m256*)c);
+        __m256 A; VLOAD_256(a, A, 0);
+        __m256 B; VLOAD_256(b, B, 0);
+        __m256 C; VLOAD_256(c, C, 0);
+        VFMADD_256(A, B, C);
+        VSTORE_256(C, c, 0);
     }
 }
 
@@ -77,7 +82,7 @@ int main(int argc, char* argv[])
     {
         a[i] = 2.0;
         b[i] = 8.0;
-        c[i] = 0.0;
+        c[i] = 1.0;
     }
 
     {
@@ -85,11 +90,11 @@ int main(int argc, char* argv[])
         vectorized_macro(a, b, c, N);
     }
 
-    // for(auto i = 0; i < N; i++)
-    // {
-    //     std::cout << c[i] << " ";
-    // }
-    // std::cout << std::endl;
+    for(auto i = 0; i < N; i++)
+    {
+        std::cout << c[i] << " ";
+    }
+    std::cout << std::endl;
 
     return 0;
 }  
