@@ -80,9 +80,9 @@ int main(int argc, char* argv[])
 
     for(auto i = 0; i < N; i++)
     {
-        a[i] = 3.0;
+        a[i] = 2.0;
         b[i] = 8.0;
-        c[i] = 2.0;
+        c[i] = 1.0;
     }
 
     {
@@ -90,11 +90,19 @@ int main(int argc, char* argv[])
         vectorized_macro(a, b, c, N);
     }
 
-    for(auto i = 0; i < N; i++)
-    {
-        std::cout << c[i] << " ";
+    // for(auto i = 0; i < N; i++)
+    // {
+    //     std::cout << c[i] << " ";
+    // }
+    // std::cout << std::endl;
+
+    // Test
+    bool correct = true;
+    for(auto i = 0; i < N; i++) {
+        if(c[i] != 17) correct = false;
+        break;
     }
-    std::cout << std::endl;
+    std::cout << "\nTest passed: " << correct << std::endl;
 
     return 0;
 }  
