@@ -25,12 +25,12 @@ asm volatile(                           \
  * From memory to register (256b registers)
  * 
  */
-#define VLOAD_256(src, dest, idx)  \
-asm volatile(					                      \
-	"vmovaps (%[vsrc],%q[vidx],8),%[vdest]"	  \
-	: [vdest] "=x"(dest)		                  \
-	: [vsrc] "r"(src),                        \
-    [vidx] "r"(idx)			                    \
+#define VLOAD_256(src, dest, idx) \
+asm volatile(                     \
+	"vmovaps (%[vsrc],%q[vidx],8),%[vdest]"  \
+	: [vdest] "=x"(dest)  \
+	: [vsrc] "r"(src),    \
+    [vidx] "r"(idx)     \
 );
 
 /**
@@ -38,11 +38,12 @@ asm volatile(					                      \
  * 
  */
 #define VSTORE_256(src, dest, idx)  \
-asm volatile(					                      \
-	"vmovaps %[vsrc],(%[vdest],%q[vidx],8)"	  \
-	:		                                      \
-	: [vsrc] "v"(src), [vdest] "r"(dest),     \
-    [vidx] "r"(idx)			                    \
+asm volatile(                       \
+	"vmovaps %[vsrc],(%[vdest],%q[vidx],8)" \
+	:		                                    \
+	: [vsrc] "v"(src),    \ 
+    [vdest] "r"(dest),  \
+    [vidx] "r"(idx)     \
 );
 
 
