@@ -377,6 +377,8 @@ _Z16vectorized_macroPfS_S_m:
 	.string	"Vectorized"
 .LC11:
 	.string	"Vectorized (Macro)"
+.LC12:
+	.string	" "
 	.text
 	.globl	main
 	.type	main, @function
@@ -393,16 +395,16 @@ main:
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
 	pushq	%rbx
-	subq	$152, %rsp
+	subq	$168, %rsp
 	.cfi_offset 3, -24
-	movl	%edi, -148(%rbp)
-	movq	%rsi, -160(%rbp)
+	movl	%edi, -164(%rbp)
+	movq	%rsi, -176(%rbp)
 	.loc 2 37 1
 	movq	%fs:40, %rax
 	movq	%rax, -24(%rbp)
 	xorl	%eax, %eax
 	.loc 2 38 5
-	cmpl	$2, -148(%rbp)
+	cmpl	$2, -164(%rbp)
 	je	.L17
 	.loc 2 40 22
 	leaq	.LC4(%rip), %rsi
@@ -412,10 +414,10 @@ main:
 .LEHE0:
 	.loc 2 41 16
 	movl	$1, %eax
-	jmp	.L25
+	jmp	.L27
 .L17:
 	.loc 2 43 35
-	movq	-160(%rbp), %rax
+	movq	-176(%rbp), %rax
 	addq	$8, %rax
 	.loc 2 43 28
 	movq	(%rax), %rax
@@ -447,10 +449,10 @@ main:
 	call	posix_memalign@PLT
 .LBB17:
 	.loc 2 52 14
-	movl	$0, -140(%rbp)
+	movl	$0, -144(%rbp)
 .L20:
 	.loc 2 52 21 discriminator 3
-	movl	-140(%rbp), %eax
+	movl	-144(%rbp), %eax
 	cltq
 	.loc 2 52 23 discriminator 3
 	cmpq	%rax, -104(%rbp)
@@ -458,7 +460,7 @@ main:
 	.loc 2 54 12 discriminator 2
 	movq	-128(%rbp), %rdx
 	.loc 2 54 11 discriminator 2
-	movl	-140(%rbp), %eax
+	movl	-144(%rbp), %eax
 	cltq
 	.loc 2 54 12 discriminator 2
 	salq	$2, %rax
@@ -469,7 +471,7 @@ main:
 	.loc 2 55 12 discriminator 2
 	movq	-120(%rbp), %rdx
 	.loc 2 55 11 discriminator 2
-	movl	-140(%rbp), %eax
+	movl	-144(%rbp), %eax
 	cltq
 	.loc 2 55 12 discriminator 2
 	salq	$2, %rax
@@ -480,7 +482,7 @@ main:
 	.loc 2 56 12 discriminator 2
 	movq	-112(%rbp), %rdx
 	.loc 2 56 11 discriminator 2
-	movl	-140(%rbp), %eax
+	movl	-144(%rbp), %eax
 	cltq
 	.loc 2 56 12 discriminator 2
 	salq	$2, %rax
@@ -489,16 +491,16 @@ main:
 	vxorps	%xmm0, %xmm0, %xmm0
 	vmovss	%xmm0, (%rax)
 	.loc 2 52 5 discriminator 2
-	incl	-140(%rbp)
+	incl	-144(%rbp)
 	jmp	.L20
 .L19:
 .LBE17:
 .LBB18:
 	.loc 2 60 9
-	leaq	-141(%rbp), %rax
+	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcEC1Ev@PLT
-	leaq	-141(%rbp), %rdx
+	leaq	-145(%rbp), %rdx
 	leaq	-96(%rbp), %rax
 	leaq	.LC8(%rip), %rsi
 	movq	%rax, %rdi
@@ -516,7 +518,7 @@ main:
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
-	leaq	-141(%rbp), %rax
+	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcED1Ev@PLT
 	.loc 2 61 14 is_stmt 1
@@ -533,10 +535,10 @@ main:
 .LBE18:
 .LBB19:
 	.loc 2 64 14
-	movl	$0, -136(%rbp)
+	movl	$0, -140(%rbp)
 .L22:
 	.loc 2 64 21 discriminator 3
-	movl	-136(%rbp), %eax
+	movl	-140(%rbp), %eax
 	cltq
 	.loc 2 64 23 discriminator 3
 	cmpq	%rax, -104(%rbp)
@@ -544,7 +546,7 @@ main:
 	.loc 2 66 12 discriminator 2
 	movq	-128(%rbp), %rdx
 	.loc 2 66 11 discriminator 2
-	movl	-136(%rbp), %eax
+	movl	-140(%rbp), %eax
 	cltq
 	.loc 2 66 12 discriminator 2
 	salq	$2, %rax
@@ -555,7 +557,7 @@ main:
 	.loc 2 67 12 discriminator 2
 	movq	-120(%rbp), %rdx
 	.loc 2 67 11 discriminator 2
-	movl	-136(%rbp), %eax
+	movl	-140(%rbp), %eax
 	cltq
 	.loc 2 67 12 discriminator 2
 	salq	$2, %rax
@@ -566,7 +568,7 @@ main:
 	.loc 2 68 12 discriminator 2
 	movq	-112(%rbp), %rdx
 	.loc 2 68 11 discriminator 2
-	movl	-136(%rbp), %eax
+	movl	-140(%rbp), %eax
 	cltq
 	.loc 2 68 12 discriminator 2
 	salq	$2, %rax
@@ -575,16 +577,16 @@ main:
 	vxorps	%xmm0, %xmm0, %xmm0
 	vmovss	%xmm0, (%rax)
 	.loc 2 64 5 discriminator 2
-	incl	-136(%rbp)
+	incl	-140(%rbp)
 	jmp	.L22
 .L21:
 .LBE19:
 .LBB20:
 	.loc 2 72 9
-	leaq	-141(%rbp), %rax
+	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcEC1Ev@PLT
-	leaq	-141(%rbp), %rdx
+	leaq	-145(%rbp), %rdx
 	leaq	-96(%rbp), %rax
 	leaq	.LC10(%rip), %rsi
 	movq	%rax, %rdi
@@ -602,7 +604,7 @@ main:
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
-	leaq	-141(%rbp), %rax
+	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcED1Ev@PLT
 	.loc 2 73 19 is_stmt 1
@@ -619,10 +621,10 @@ main:
 .LBE20:
 .LBB21:
 	.loc 2 76 14
-	movl	$0, -132(%rbp)
+	movl	$0, -136(%rbp)
 .L24:
 	.loc 2 76 21 discriminator 3
-	movl	-132(%rbp), %eax
+	movl	-136(%rbp), %eax
 	cltq
 	.loc 2 76 23 discriminator 3
 	cmpq	%rax, -104(%rbp)
@@ -630,18 +632,18 @@ main:
 	.loc 2 78 12 discriminator 2
 	movq	-128(%rbp), %rdx
 	.loc 2 78 11 discriminator 2
-	movl	-132(%rbp), %eax
+	movl	-136(%rbp), %eax
 	cltq
 	.loc 2 78 12 discriminator 2
 	salq	$2, %rax
 	addq	%rdx, %rax
 	.loc 2 78 14 discriminator 2
-	vmovss	.LC5(%rip), %xmm0
+	vmovss	.LC6(%rip), %xmm0
 	vmovss	%xmm0, (%rax)
 	.loc 2 79 12 discriminator 2
 	movq	-120(%rbp), %rdx
 	.loc 2 79 11 discriminator 2
-	movl	-132(%rbp), %eax
+	movl	-136(%rbp), %eax
 	cltq
 	.loc 2 79 12 discriminator 2
 	salq	$2, %rax
@@ -652,25 +654,25 @@ main:
 	.loc 2 80 12 discriminator 2
 	movq	-112(%rbp), %rdx
 	.loc 2 80 11 discriminator 2
-	movl	-132(%rbp), %eax
+	movl	-136(%rbp), %eax
 	cltq
 	.loc 2 80 12 discriminator 2
 	salq	$2, %rax
 	addq	%rdx, %rax
 	.loc 2 80 14 discriminator 2
-	vxorps	%xmm0, %xmm0, %xmm0
+	vmovss	.LC5(%rip), %xmm0
 	vmovss	%xmm0, (%rax)
 	.loc 2 76 5 discriminator 2
-	incl	-132(%rbp)
+	incl	-136(%rbp)
 	jmp	.L24
 .L23:
 .LBE21:
 .LBB22:
 	.loc 2 84 9
-	leaq	-141(%rbp), %rax
+	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcEC1Ev@PLT
-	leaq	-141(%rbp), %rdx
+	leaq	-145(%rbp), %rdx
 	leaq	-96(%rbp), %rax
 	leaq	.LC11(%rip), %rsi
 	movq	%rax, %rdi
@@ -688,7 +690,7 @@ main:
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
-	leaq	-141(%rbp), %rax
+	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcED1Ev@PLT
 	.loc 2 85 25 is_stmt 1
@@ -703,37 +705,54 @@ main:
 	movq	%rax, %rdi
 	call	_ZN5TimerD1Ev
 .LBE22:
+.LBB23:
+	.loc 2 88 14
+	movl	$0, -132(%rbp)
+.L26:
+	.loc 2 88 21 discriminator 1
+	movl	-132(%rbp), %eax
+	cltq
+	.loc 2 88 23 discriminator 1
+	cmpq	%rax, -104(%rbp)
+	jbe	.L25
+	.loc 2 90 25
+	movq	-112(%rbp), %rdx
+	.loc 2 90 24
+	movl	-132(%rbp), %eax
+	cltq
+	.loc 2 90 25
+	salq	$2, %rax
+	addq	%rdx, %rax
+	movl	(%rax), %eax
+	vmovd	%eax, %xmm0
+	leaq	_ZSt4cout(%rip), %rdi
+.LEHB7:
+	call	_ZNSolsEf@PLT
+	.loc 2 90 30
+	leaq	.LC12(%rip), %rsi
+	movq	%rax, %rdi
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
+	.loc 2 88 5
+	incl	-132(%rbp)
+	jmp	.L26
+.L25:
+.LBE23:
+	.loc 2 92 23
+	movq	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GOTPCREL(%rip), %rax
+	movq	%rax, %rsi
+	leaq	_ZSt4cout(%rip), %rdi
+	call	_ZNSolsEPFRSoS_E@PLT
 	.loc 2 94 12
 	movl	$0, %eax
-.L25:
+.L27:
 	.loc 2 95 1 discriminator 1
 	movq	-24(%rbp), %rcx
 	xorq	%fs:40, %rcx
-	je	.L32
-	jmp	.L39
-.L34:
-	endbr64
-	movq	%rax, %rbx
-.LBB23:
-	leaq	-96(%rbp), %rax
-	movq	%rax, %rdi
-	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
-	jmp	.L27
-.L33:
-	endbr64
-	movq	%rax, %rbx
-.L27:
-	leaq	-141(%rbp), %rax
-	movq	%rax, %rdi
-	call	_ZNSaIcED1Ev@PLT
-	movq	%rbx, %rax
-	movq	%rax, %rdi
-.LEHB7:
-	call	_Unwind_Resume@PLT
+	je	.L34
+	jmp	.L41
 .L36:
 	endbr64
 	movq	%rax, %rbx
-.LBE23:
 .LBB24:
 	leaq	-96(%rbp), %rax
 	movq	%rax, %rdi
@@ -743,7 +762,7 @@ main:
 	endbr64
 	movq	%rax, %rbx
 .L29:
-	leaq	-141(%rbp), %rax
+	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcED1Ev@PLT
 	movq	%rbx, %rax
@@ -762,19 +781,38 @@ main:
 	endbr64
 	movq	%rax, %rbx
 .L31:
-	leaq	-141(%rbp), %rax
+	leaq	-145(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNSaIcED1Ev@PLT
+	movq	%rbx, %rax
+	movq	%rax, %rdi
+	call	_Unwind_Resume@PLT
+.L40:
+	endbr64
+	movq	%rax, %rbx
+.LBE25:
+.LBB26:
+	leaq	-96(%rbp), %rax
+	movq	%rax, %rdi
+	call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev@PLT
+	jmp	.L33
+.L39:
+	endbr64
+	movq	%rax, %rbx
+.L33:
+	leaq	-145(%rbp), %rax
 	movq	%rax, %rdi
 	call	_ZNSaIcED1Ev@PLT
 	movq	%rbx, %rax
 	movq	%rax, %rdi
 	call	_Unwind_Resume@PLT
 .LEHE7:
-.L39:
-.LBE25:
+.L41:
+.LBE26:
 	.loc 2 95 1 is_stmt 0
 	call	__stack_chk_fail@PLT
-.L32:
-	addq	$152, %rsp
+.L34:
+	addq	$168, %rsp
 	popq	%rbx
 	popq	%rbp
 	.cfi_def_cfa 7, 8
@@ -794,27 +832,27 @@ main:
 	.uleb128 0
 	.uleb128 .LEHB1-.LFB5835
 	.uleb128 .LEHE1-.LEHB1
-	.uleb128 .L33-.LFB5835
+	.uleb128 .L35-.LFB5835
 	.uleb128 0
 	.uleb128 .LEHB2-.LFB5835
 	.uleb128 .LEHE2-.LEHB2
-	.uleb128 .L34-.LFB5835
+	.uleb128 .L36-.LFB5835
 	.uleb128 0
 	.uleb128 .LEHB3-.LFB5835
 	.uleb128 .LEHE3-.LEHB3
-	.uleb128 .L35-.LFB5835
+	.uleb128 .L37-.LFB5835
 	.uleb128 0
 	.uleb128 .LEHB4-.LFB5835
 	.uleb128 .LEHE4-.LEHB4
-	.uleb128 .L36-.LFB5835
+	.uleb128 .L38-.LFB5835
 	.uleb128 0
 	.uleb128 .LEHB5-.LFB5835
 	.uleb128 .LEHE5-.LEHB5
-	.uleb128 .L37-.LFB5835
+	.uleb128 .L39-.LFB5835
 	.uleb128 0
 	.uleb128 .LEHB6-.LFB5835
 	.uleb128 .LEHE6-.LEHB6
-	.uleb128 .L38-.LFB5835
+	.uleb128 .L40-.LFB5835
 	.uleb128 0
 	.uleb128 .LEHB7-.LFB5835
 	.uleb128 .LEHE7-.LEHB7
@@ -825,7 +863,7 @@ main:
 	.size	main, .-main
 	.type	_Z41__static_initialization_and_destruction_0ii, @function
 _Z41__static_initialization_and_destruction_0ii:
-.LFB6363:
+.LFB6364:
 	.loc 2 95 1 is_stmt 1
 	.cfi_startproc
 	endbr64
@@ -839,10 +877,10 @@ _Z41__static_initialization_and_destruction_0ii:
 	movl	%esi, -8(%rbp)
 	.loc 2 95 1
 	cmpl	$1, -4(%rbp)
-	jne	.L42
+	jne	.L44
 	.loc 2 95 1 is_stmt 0 discriminator 1
 	cmpl	$65535, -8(%rbp)
-	jne	.L42
+	jne	.L44
 	.file 5 "/usr/include/c++/9/iostream"
 	.loc 5 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rdi
@@ -852,18 +890,18 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	_ZNSt8ios_base4InitD1Ev@GOTPCREL(%rip), %rax
 	movq	%rax, %rdi
 	call	__cxa_atexit@PLT
-.L42:
+.L44:
 	.loc 2 95 1
 	nop
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE6363:
+.LFE6364:
 	.size	_Z41__static_initialization_and_destruction_0ii, .-_Z41__static_initialization_and_destruction_0ii
 	.type	_GLOBAL__sub_I__Z5naivePfS_S_m, @function
 _GLOBAL__sub_I__Z5naivePfS_S_m:
-.LFB6364:
+.LFB6365:
 	.loc 2 95 1
 	.cfi_startproc
 	endbr64
@@ -880,7 +918,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE6364:
+.LFE6365:
 	.size	_GLOBAL__sub_I__Z5naivePfS_S_m, .-_GLOBAL__sub_I__Z5naivePfS_S_m
 	.section	.init_array,"aw"
 	.align 8
@@ -970,7 +1008,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.file 68 "/usr/include/c++/9/stdlib.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.long	0x6aab
+	.long	0x6ace
 	.value	0x4
 	.long	.Ldebug_abbrev0
 	.byte	0x8
@@ -987,7 +1025,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x2b
 	.byte	0
 	.long	0x3751
-	.uleb128 0x5e
+	.uleb128 0x5f
 	.long	.LASF392
 	.byte	0xb
 	.value	0x118
@@ -1076,7 +1114,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF308
 	.byte	0xf
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x60
 	.byte	0x10
 	.byte	0x6
 	.byte	0xb0
@@ -1408,7 +1446,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4458
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF47
 	.byte	0x6
 	.value	0x15e
@@ -1422,7 +1460,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x113
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF48
 	.byte	0x6
 	.value	0x167
@@ -1436,7 +1474,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x113
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF51
 	.byte	0x6
 	.value	0x170
@@ -1450,7 +1488,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x427c
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF53
 	.byte	0x6
 	.value	0x183
@@ -1471,7 +1509,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x44
 	.long	0x3ae1
 	.byte	0x1
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF53
 	.byte	0x6
 	.value	0x187
@@ -1492,7 +1530,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x8
 	.long	0x3d20
 	.byte	0x1
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF53
 	.byte	0x6
 	.value	0x18c
@@ -1506,7 +1544,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x47a2
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF53
 	.byte	0x6
 	.value	0x190
@@ -1592,7 +1630,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.long	0x5a22
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.long	.LASF68
 	.byte	0x6
 	.value	0x1bc
@@ -4276,7 +4314,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x5b
 	.byte	0xa
 	.long	0x1e49
-	.uleb128 0x60
+	.uleb128 0x61
 	.long	.LASF266
 	.byte	0x9
 	.byte	0x5e
@@ -4297,7 +4335,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x1a
 	.long	.LASF411
 	.long	0x1e49
-	.uleb128 0x50
+	.uleb128 0x51
 	.long	.LASF435
 	.byte	0xa
 	.byte	0x34
@@ -4531,7 +4569,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x106
 	.byte	0x1d
 	.long	0x4d06
-	.uleb128 0x51
+	.uleb128 0x52
 	.long	.LASF388
 	.uleb128 0xa
 	.long	0x206c
@@ -4647,17 +4685,17 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x102
 	.byte	0x1a
 	.long	0x41c2
-	.uleb128 0x61
+	.uleb128 0x62
 	.long	.LASF305
 	.byte	0xc
 	.value	0x9bd
 	.byte	0xd
-	.uleb128 0x61
+	.uleb128 0x62
 	.long	.LASF306
 	.byte	0xc
 	.value	0xa0b
 	.byte	0xd
-	.uleb128 0x62
+	.uleb128 0x63
 	.long	.LASF316
 	.byte	0x1
 	.byte	0xd
@@ -4739,7 +4777,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x4c
 	.byte	0xa
 	.long	0x223b
-	.uleb128 0x60
+	.uleb128 0x61
 	.long	.LASF312
 	.byte	0xe
 	.byte	0x4c
@@ -4761,7 +4799,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x223b
 	.byte	0x1
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x63
 	.long	.LASF317
 	.byte	0x1
 	.byte	0xf
@@ -4800,7 +4838,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x226b
 	.byte	0
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x64
 	.long	.LASF321
 	.byte	0x10
 	.byte	0x32
@@ -4812,7 +4850,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x122
 	.byte	0xc
 	.long	0x2487
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF157
 	.byte	0x11
 	.value	0x12b
@@ -4987,7 +5025,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4dbd
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x65
 	.string	"eof"
 	.byte	0x11
 	.value	0x18e
@@ -5016,7 +5054,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x19a
 	.byte	0xc
 	.long	0x2673
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF157
 	.byte	0x11
 	.value	0x1a3
@@ -5191,7 +5229,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4ddb
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x65
 	.string	"eof"
 	.byte	0x11
 	.value	0x1f9
@@ -5799,7 +5837,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x198
 	.byte	0xd
 	.long	0x524a
-	.uleb128 0x27
+	.uleb128 0x28
 	.long	.LASF374
 	.byte	0x17
 	.value	0x1d4
@@ -5971,9 +6009,9 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.uleb128 0xa
 	.long	0x2afa
-	.uleb128 0x51
+	.uleb128 0x52
 	.long	.LASF389
-	.uleb128 0x51
+	.uleb128 0x52
 	.long	.LASF390
 	.uleb128 0x5
 	.long	.LASF391
@@ -5983,13 +6021,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x41
 	.uleb128 0xa
 	.long	0x2bfc
-	.uleb128 0x5e
+	.uleb128 0x5f
 	.long	.LASF393
 	.byte	0x6
 	.value	0x1a9e
 	.byte	0x14
 	.long	0x2c3f
-	.uleb128 0x52
+	.uleb128 0x53
 	.long	.LASF394
 	.byte	0x6
 	.value	0x1aa0
@@ -5999,7 +6037,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x1aa0
 	.byte	0x14
 	.long	0x2c1a
-	.uleb128 0x52
+	.uleb128 0x53
 	.long	.LASF395
 	.byte	0x1a
 	.value	0x383
@@ -6020,7 +6058,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x1b
 	.byte	0x47
 	.byte	0x14
-	.uleb128 0x65
+	.uleb128 0x66
 	.byte	0x1b
 	.byte	0x47
 	.byte	0x14
@@ -6093,13 +6131,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x5a6f
 	.byte	0
-	.uleb128 0x66
+	.uleb128 0x67
 	.long	.LASF401
 	.byte	0x1c
 	.value	0x26d
 	.byte	0x1b
 	.long	0x523e
-	.uleb128 0x66
+	.uleb128 0x67
 	.long	.LASF402
 	.byte	0x1c
 	.value	0x26e
@@ -6415,7 +6453,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x47
 	.byte	0xb
 	.long	0x5d09
-	.uleb128 0x50
+	.uleb128 0x51
 	.long	.LASF436
 	.byte	0x1a
 	.byte	0x3b
@@ -6536,7 +6574,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.string	"_Tp"
 	.long	0x4a3e
-	.uleb128 0x67
+	.uleb128 0x68
 	.string	"__v"
 	.long	0x4a3e
 	.long	0x3b9aca00
@@ -6628,7 +6666,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF447
 	.long	0x4a3e
 	.byte	0x1
-	.uleb128 0x53
+	.uleb128 0x54
 	.long	.LASF448
 	.long	0x4a3e
 	.byte	0x1
@@ -6658,7 +6696,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF447
 	.long	0x4a3e
 	.value	0xe10
-	.uleb128 0x53
+	.uleb128 0x54
 	.long	.LASF448
 	.long	0x4a3e
 	.byte	0x1
@@ -6709,7 +6747,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.string	"_Tp"
 	.long	0x4a3e
-	.uleb128 0x68
+	.uleb128 0x69
 	.string	"__v"
 	.long	0x4a3e
 	.value	0xe10
@@ -6771,7 +6809,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF447
 	.long	0x4a3e
 	.byte	0x3c
-	.uleb128 0x53
+	.uleb128 0x54
 	.long	.LASF448
 	.long	0x4a3e
 	.byte	0x1
@@ -6905,7 +6943,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.string	"_Tp"
 	.long	0x4a3e
-	.uleb128 0x68
+	.uleb128 0x69
 	.string	"__v"
 	.long	0x4a3e
 	.value	0x3e8
@@ -7018,7 +7056,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.string	"_Tp"
 	.long	0x4a3e
-	.uleb128 0x67
+	.uleb128 0x68
 	.string	"__v"
 	.long	0x4a3e
 	.long	0xf4240
@@ -7268,7 +7306,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4458
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.long	.LASF497
 	.byte	0x23
 	.byte	0x63
@@ -7288,7 +7326,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x11a
 	.byte	0xb
 	.long	0x4193
-	.uleb128 0x52
+	.uleb128 0x53
 	.long	.LASF392
 	.byte	0xb
 	.value	0x11c
@@ -7313,7 +7351,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.value	0x105
 	.byte	0xb
 	.long	0x4cde
-	.uleb128 0x63
+	.uleb128 0x64
 	.long	.LASF499
 	.byte	0x24
 	.byte	0x23
@@ -7722,14 +7760,14 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF265
 	.long	0x2778
 	.byte	0
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.long	.LASF537
 	.byte	0x8
 	.byte	0x28
 	.value	0x310
 	.byte	0xb
 	.long	0x3d1b
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.long	.LASF538
 	.byte	0x28
 	.value	0x313
@@ -7749,7 +7787,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.long	0x5dce
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.long	.LASF539
 	.byte	0x28
 	.value	0x323
@@ -7963,14 +8001,14 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.uleb128 0xa
 	.long	0x3ae1
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.long	.LASF563
 	.byte	0x8
 	.byte	0x28
 	.value	0x310
 	.byte	0xb
 	.long	0x3f5a
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.long	.LASF538
 	.byte	0x28
 	.value	0x313
@@ -7990,7 +8028,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.long	0x5db6
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.long	.LASF539
 	.byte	0x28
 	.value	0x323
@@ -8463,7 +8501,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x47a2
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.long	.LASF591
 	.byte	0x29
 	.byte	0x98
@@ -8559,7 +8597,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x1
 	.long	.LASF820
 	.long	0x426c
-	.uleb128 0x5f
+	.uleb128 0x60
 	.byte	0x4
 	.byte	0x2d
 	.byte	0x11
@@ -8980,7 +9018,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4491
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.long	.LASF808
 	.byte	0x32
 	.value	0x2dd
@@ -9900,13 +9938,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x2216
 	.uleb128 0x8d
 	.long	0x2240
-	.uleb128 0x50
+	.uleb128 0x51
 	.long	.LASF731
 	.byte	0x10
 	.byte	0x38
 	.byte	0xb
 	.long	0x4da5
-	.uleb128 0x65
+	.uleb128 0x66
 	.byte	0x10
 	.byte	0x3a
 	.byte	0x18
@@ -10436,7 +10474,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4458
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	.LASF809
 	.byte	0x38
 	.byte	0x7d
@@ -10560,7 +10598,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x9
 	.long	0x4288
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.string	"rem"
 	.byte	0x3d
 	.byte	0x3d
@@ -10588,7 +10626,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0xe
 	.long	0x4a3e
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.string	"rem"
 	.byte	0x3d
 	.byte	0x45
@@ -10616,7 +10654,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x13
 	.long	0x4cd7
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.string	"rem"
 	.byte	0x3d
 	.byte	0x4f
@@ -10720,7 +10758,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x5328
 	.byte	0
-	.uleb128 0x6c
+	.uleb128 0x6d
 	.string	"div"
 	.byte	0x3d
 	.value	0x354
@@ -10818,7 +10856,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x4288
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.long	.LASF841
 	.byte	0x3d
 	.value	0x1c5
@@ -11019,7 +11057,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x30
 	.byte	0x2b
 	.byte	0xe
-	.uleb128 0x57
+	.uleb128 0x58
 	.long	.LASF860
 	.uleb128 0x7
 	.byte	0x8
@@ -11037,12 +11075,12 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x568b
-	.uleb128 0x57
+	.uleb128 0x58
 	.long	.LASF861
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x56bb
-	.uleb128 0x57
+	.uleb128 0x58
 	.long	.LASF862
 	.uleb128 0x7
 	.byte	0x8
@@ -11291,7 +11329,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x56fe
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.long	.LASF886
 	.byte	0x3f
 	.value	0x1ec
@@ -11364,7 +11402,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x1
 	.long	0x41b6
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	.LASF893
 	.byte	0x3f
 	.byte	0xad
@@ -11599,7 +11637,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x36
 	.byte	0xc
 	.long	0x2f1b
-	.uleb128 0x6c
+	.uleb128 0x6d
 	.string	"abs"
 	.byte	0x3d
 	.value	0x348
@@ -11725,10 +11763,10 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x2a
 	.byte	0xf
 	.long	0x5c3e
-	.uleb128 0x6d
+	.uleb128 0x6e
 	.long	0x41a1
 	.long	0x5c4a
-	.uleb128 0x6e
+	.uleb128 0x6f
 	.byte	0x7
 	.byte	0
 	.uleb128 0x5
@@ -11737,13 +11775,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x37
 	.byte	0xf
 	.long	0x5c56
-	.uleb128 0x6d
+	.uleb128 0x6e
 	.long	0x41a1
 	.long	0x5c62
-	.uleb128 0x6e
+	.uleb128 0x6f
 	.byte	0x7
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	.LASF906
 	.byte	0x3b
 	.byte	0x48
@@ -11946,11 +11984,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF923
 	.long	0x3929
 	.byte	0x1f
-	.uleb128 0x58
+	.uleb128 0x59
 	.long	.LASF924
 	.long	0x3935
 	.long	0x7fffffff
-	.uleb128 0x59
+	.uleb128 0x5a
 	.long	.LASF925
 	.long	0x3941
 	.sleb128 -2147483648
@@ -11998,7 +12036,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF936
 	.long	0x40e7
 	.value	0x7fff
-	.uleb128 0x59
+	.uleb128 0x5a
 	.long	.LASF937
 	.long	0x40f3
 	.sleb128 -32768
@@ -12014,7 +12052,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF940
 	.long	0x412e
 	.quad	0x7fffffffffffffff
-	.uleb128 0x59
+	.uleb128 0x5a
 	.long	.LASF941
 	.long	0x413a
 	.sleb128 -9223372036854775808
@@ -12028,7 +12066,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF944
 	.long	0x2fe2
 	.byte	0x1
-	.uleb128 0x58
+	.uleb128 0x59
 	.long	.LASF945
 	.long	0x305c
 	.long	0x3b9aca00
@@ -12098,7 +12136,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.long	.LASF966
 	.long	0x3520
-	.uleb128 0x58
+	.uleb128 0x59
 	.long	.LASF967
 	.long	0x3494
 	.long	0xf4240
@@ -12110,14 +12148,14 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x3568
 	.uleb128 0x98
 	.long	.LASF1027
-	.quad	.LFB6364
-	.quad	.LFE6364-.LFB6364
+	.quad	.LFB6365
+	.quad	.LFE6365-.LFB6365
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x99
 	.long	.LASF1028
-	.quad	.LFB6363
-	.quad	.LFE6363-.LFB6363
+	.quad	.LFB6364
+	.quad	.LFE6364-.LFB6364
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x6046
@@ -12288,7 +12326,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x47a2
 	.uleb128 0x1
 	.long	0x2257
-	.uleb128 0x5a
+	.uleb128 0x5b
 	.long	.LASF978
 	.byte	0x7
 	.byte	0xd7
@@ -12319,7 +12357,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x4458
 	.uleb128 0x1
 	.long	0x2257
-	.uleb128 0x5a
+	.uleb128 0x5b
 	.long	.LASF978
 	.byte	0x7
 	.byte	0xd7
@@ -12755,7 +12793,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LFE5835-.LFB5835
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x4e
 	.long	.LASF997
 	.byte	0x2
@@ -12764,7 +12802,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x4288
 	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -164
+	.sleb128 -180
 	.uleb128 0x4e
 	.long	.LASF998
 	.byte	0x2
@@ -12773,8 +12811,8 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x5515
 	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -176
-	.uleb128 0x28
+	.sleb128 -192
+	.uleb128 0x27
 	.string	"N"
 	.byte	0x2
 	.byte	0x2b
@@ -12783,38 +12821,38 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -120
-	.uleb128 0x28
+	.uleb128 0x27
 	.string	"a"
 	.byte	0x2
 	.byte	0x2d
 	.byte	0xc
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -144
-	.uleb128 0x28
+	.uleb128 0x27
 	.string	"b"
 	.byte	0x2
 	.byte	0x2e
 	.byte	0xc
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -136
-	.uleb128 0x28
+	.uleb128 0x27
 	.string	"c"
 	.byte	0x2
 	.byte	0x2f
 	.byte	0xc
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -128
-	.uleb128 0x5b
+	.uleb128 0x5c
 	.quad	.LBB17
 	.quad	.LBE17-.LBB17
 	.long	0x66cc
-	.uleb128 0x28
+	.uleb128 0x27
 	.string	"i"
 	.byte	0x2
 	.byte	0x34
@@ -12822,9 +12860,9 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x4288
 	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -156
+	.sleb128 -160
 	.byte	0
-	.uleb128 0x6f
+	.uleb128 0x5d
 	.long	.Ldebug_ranges0+0
 	.long	0x66e6
 	.uleb128 0x40
@@ -12837,11 +12875,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x91
 	.sleb128 -80
 	.byte	0
-	.uleb128 0x5b
+	.uleb128 0x5c
 	.quad	.LBB19
 	.quad	.LBE19-.LBB19
 	.long	0x670a
-	.uleb128 0x28
+	.uleb128 0x27
 	.string	"i"
 	.byte	0x2
 	.byte	0x40
@@ -12849,9 +12887,9 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x4288
 	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -152
+	.sleb128 -156
 	.byte	0
-	.uleb128 0x6f
+	.uleb128 0x5d
 	.long	.Ldebug_ranges0+0x30
 	.long	0x6724
 	.uleb128 0x40
@@ -12864,11 +12902,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x91
 	.sleb128 -80
 	.byte	0
-	.uleb128 0x5b
+	.uleb128 0x5c
 	.quad	.LBB21
 	.quad	.LBE21-.LBB21
 	.long	0x6748
-	.uleb128 0x28
+	.uleb128 0x27
 	.string	"i"
 	.byte	0x2
 	.byte	0x4c
@@ -12876,10 +12914,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x4288
 	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -148
+	.sleb128 -152
 	.byte	0
-	.uleb128 0x9c
+	.uleb128 0x5d
 	.long	.Ldebug_ranges0+0x60
+	.long	0x6762
 	.uleb128 0x40
 	.long	.LASF1000
 	.byte	0x2
@@ -12890,11 +12929,24 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x91
 	.sleb128 -80
 	.byte	0
+	.uleb128 0x4f
+	.quad	.LBB23
+	.quad	.LBE23-.LBB23
+	.uleb128 0x27
+	.string	"i"
+	.byte	0x2
+	.byte	0x58
+	.byte	0xe
+	.long	0x4288
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -148
+	.byte	0
 	.byte	0
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x41a1
-	.uleb128 0x5c
+	.uleb128 0x5e
 	.long	.LASF1001
 	.byte	0x2
 	.byte	0x19
@@ -12904,13 +12956,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LFE5834-.LFB5834
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x67eb
+	.long	0x680e
 	.uleb128 0x24
 	.string	"a"
 	.byte	0x2
 	.byte	0x19
 	.byte	0x1e
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 -24
@@ -12919,7 +12971,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x2
 	.byte	0x19
 	.byte	0x28
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 -32
@@ -12928,7 +12980,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x2
 	.byte	0x19
 	.byte	0x32
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 -40
@@ -12950,10 +13002,10 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 -8
-	.uleb128 0x5d
+	.uleb128 0x4f
 	.quad	.LBB16
 	.quad	.LBE16-.LBB16
-	.uleb128 0x28
+	.uleb128 0x27
 	.string	"i"
 	.byte	0x2
 	.byte	0x1e
@@ -12964,7 +13016,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.sleb128 -12
 	.byte	0
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5e
 	.long	.LASF1004
 	.byte	0x2
 	.byte	0xf
@@ -12974,13 +13026,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LFE5833-.LFB5833
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x68d6
+	.long	0x68f9
 	.uleb128 0x24
 	.string	"a"
 	.byte	0x2
 	.byte	0xf
 	.byte	0x18
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x3
 	.byte	0x77
 	.sleb128 -96
@@ -12989,7 +13041,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x2
 	.byte	0xf
 	.byte	0x22
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x3
 	.byte	0x77
 	.sleb128 -104
@@ -12998,7 +13050,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x2
 	.byte	0xf
 	.byte	0x2c
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x3
 	.byte	0x77
 	.sleb128 -112
@@ -13020,10 +13072,10 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x3
 	.byte	0x77
 	.sleb128 -72
-	.uleb128 0x5d
+	.uleb128 0x4f
 	.quad	.LBB11
 	.quad	.LBE11-.LBB11
-	.uleb128 0x28
+	.uleb128 0x27
 	.string	"i"
 	.byte	0x2
 	.byte	0x13
@@ -13032,51 +13084,51 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x3
 	.byte	0x77
 	.sleb128 -76
-	.uleb128 0x9d
-	.long	0x6a31
+	.uleb128 0x9c
+	.long	0x6a54
 	.quad	.LBB12
 	.quad	.LBE12-.LBB12
 	.byte	0x2
 	.byte	0x15
 	.byte	0x18
-	.long	0x68aa
+	.long	0x68cd
 	.uleb128 0x30
-	.long	0x6a5f
+	.long	0x6a82
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 40
 	.uleb128 0x30
-	.long	0x6a53
+	.long	0x6a76
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 8
 	.uleb128 0x30
-	.long	0x6a47
+	.long	0x6a6a
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 -24
 	.byte	0
-	.uleb128 0x9e
-	.long	0x6a6c
+	.uleb128 0x9d
+	.long	0x6a8f
 	.quad	.LBB14
 	.quad	.LBE14-.LBB14
 	.byte	0x2
 	.byte	0x15
 	.byte	0x18
 	.uleb128 0x30
-	.long	0x6a8c
+	.long	0x6aaf
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 -56
 	.uleb128 0x30
-	.long	0x6a7f
+	.long	0x6aa2
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 -64
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5e
 	.long	.LASF1006
 	.byte	0x2
 	.byte	0x7
@@ -13086,13 +13138,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.quad	.LFE5832-.LFB5832
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x694c
+	.long	0x696f
 	.uleb128 0x24
 	.string	"a"
 	.byte	0x2
 	.byte	0x7
 	.byte	0x13
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
@@ -13101,7 +13153,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x2
 	.byte	0x7
 	.byte	0x1d
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
@@ -13110,7 +13162,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x2
 	.byte	0x7
 	.byte	0x27
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -56
@@ -13123,10 +13175,10 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
-	.uleb128 0x5d
+	.uleb128 0x4f
 	.quad	.LBB10
 	.quad	.LBE10-.LBB10
-	.uleb128 0x28
+	.uleb128 0x27
 	.string	"i"
 	.byte	0x2
 	.byte	0x9
@@ -13139,17 +13191,17 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.uleb128 0x21
 	.long	0x5d70
-	.long	0x695a
+	.long	0x697d
 	.byte	0x2
-	.long	0x697c
+	.long	0x699f
 	.uleb128 0x11
 	.long	.LASF979
 	.long	0x5db1
 	.uleb128 0x11
 	.long	.LASF985
 	.long	0x4290
-	.uleb128 0x9f
-	.uleb128 0x5a
+	.uleb128 0x9e
+	.uleb128 0x5b
 	.long	.LASF1008
 	.byte	0x1
 	.byte	0xe
@@ -13158,31 +13210,31 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.byte	0
 	.uleb128 0x70
-	.long	0x694c
+	.long	0x696f
 	.long	.LASF1010
-	.long	0x699f
+	.long	0x69c2
 	.quad	.LFB5830
 	.quad	.LFE5830-.LFB5830
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x69d9
+	.long	0x69fc
 	.uleb128 0x30
-	.long	0x695a
+	.long	0x697d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
+	.uleb128 0x9f
+	.long	0x698f
+	.long	0x69db
 	.uleb128 0xa0
-	.long	0x696c
-	.long	0x69b8
-	.uleb128 0xa1
-	.long	0x696e
+	.long	0x6991
 	.byte	0
-	.uleb128 0xa2
-	.long	0x696c
+	.uleb128 0xa1
+	.long	0x698f
 	.quad	.LBB9
 	.quad	.LBE9-.LBB9
-	.uleb128 0xa3
-	.long	0x696e
+	.uleb128 0xa2
+	.long	0x6991
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
@@ -13190,9 +13242,9 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.uleb128 0x21
 	.long	0x5d50
-	.long	0x69e7
+	.long	0x6a0a
 	.byte	0x2
-	.long	0x69fd
+	.long	0x6a20
 	.uleb128 0x11
 	.long	.LASF979
 	.long	0x5db1
@@ -13204,26 +13256,26 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	0x5a63
 	.byte	0
 	.uleb128 0x70
-	.long	0x69d9
+	.long	0x69fc
 	.long	.LASF1011
-	.long	0x6a20
+	.long	0x6a43
 	.quad	.LFB5827
 	.quad	.LFE5827-.LFB5827
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x6a31
+	.long	0x6a54
 	.uleb128 0x30
-	.long	0x69e7
+	.long	0x6a0a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
 	.uleb128 0x30
-	.long	0x69f0
+	.long	0x6a13
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -32
 	.byte	0
-	.uleb128 0xa4
+	.uleb128 0xa3
 	.long	.LASF1012
 	.byte	0x3
 	.byte	0x3f
@@ -13231,7 +13283,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.long	.LASF1013
 	.long	0x5c4a
 	.byte	0x3
-	.long	0x6a6c
+	.long	0x6a8f
 	.uleb128 0x2f
 	.string	"__A"
 	.byte	0x3
@@ -13251,20 +13303,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x31
 	.long	0x5c4a
 	.byte	0
-	.uleb128 0xa5
+	.uleb128 0xa4
 	.long	.LASF1014
 	.byte	0x4
 	.value	0x36e
 	.byte	0x1
 	.long	.LASF1015
 	.byte	0x3
-	.long	0x6a9a
+	.long	0x6abd
 	.uleb128 0x3f
 	.string	"__P"
 	.byte	0x4
 	.value	0x36e
 	.byte	0x19
-	.long	0x6760
+	.long	0x6783
 	.uleb128 0x3f
 	.string	"__A"
 	.byte	0x4
@@ -13272,7 +13324,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0x25
 	.long	0x5c4a
 	.byte	0
-	.uleb128 0xa6
+	.uleb128 0xa5
 	.long	0x233a
 	.uleb128 0x3f
 	.string	"__s"
@@ -13869,6 +13921,23 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.byte	0
 	.uleb128 0x27
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x28
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -13887,23 +13956,6 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x28
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x29
@@ -14511,6 +14563,15 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.byte	0
 	.uleb128 0x4f
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.byte	0
+	.byte	0
+	.uleb128 0x50
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -14537,7 +14598,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x51
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -14552,7 +14613,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.uleb128 0x2
 	.byte	0
 	.uleb128 0x3
@@ -14561,7 +14622,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -14576,7 +14637,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.uleb128 0x30
 	.byte	0
 	.uleb128 0x3
@@ -14589,7 +14650,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -14608,7 +14669,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -14627,7 +14688,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -14644,24 +14705,13 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x58
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3c
 	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x58
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x6e
-	.uleb128 0xe
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x1c
-	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x59
@@ -14672,10 +14722,21 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x47
 	.uleb128 0x13
 	.uleb128 0x1c
-	.uleb128 0xd
+	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x5a
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x6e
+	.uleb128 0xe
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x1c
+	.uleb128 0xd
+	.byte	0
+	.byte	0
+	.uleb128 0x5b
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -14690,7 +14751,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5b
+	.uleb128 0x5c
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
@@ -14701,7 +14762,16 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5d
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x55
+	.uleb128 0x17
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x5e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -14728,16 +14798,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5d
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.byte	0
-	.byte	0
-	.uleb128 0x5e
+	.uleb128 0x5f
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -14754,7 +14815,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x60
 	.uleb128 0x17
 	.byte	0x1
 	.uleb128 0xb
@@ -14769,7 +14830,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x60
+	.uleb128 0x61
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -14794,7 +14855,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x61
+	.uleb128 0x62
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -14807,7 +14868,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x63
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x3
@@ -14822,7 +14883,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x64
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -14835,7 +14896,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x65
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -14856,7 +14917,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.uleb128 0x3a
 	.byte	0
 	.uleb128 0x3a
@@ -14869,7 +14930,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x66
+	.uleb128 0x67
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -14888,7 +14949,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x67
+	.uleb128 0x68
 	.uleb128 0x30
 	.byte	0
 	.uleb128 0x3
@@ -14899,7 +14960,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x69
 	.uleb128 0x30
 	.byte	0
 	.uleb128 0x3
@@ -14910,7 +14971,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -14931,7 +14992,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -14948,7 +15009,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -14967,7 +15028,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x6c
+	.uleb128 0x6d
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -14988,7 +15049,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6d
+	.uleb128 0x6e
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x2107
@@ -14999,20 +15060,11 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6e
+	.uleb128 0x6f
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x2f
 	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x6f
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x17
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x70
@@ -15768,10 +15820,22 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.byte	0
 	.byte	0
 	.uleb128 0x9c
-	.uleb128 0xb
+	.uleb128 0x1d
 	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x17
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0xb
+	.uleb128 0x57
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x9d
@@ -15789,49 +15853,30 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0xb
 	.uleb128 0x57
 	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x9e
-	.uleb128 0x1d
+	.uleb128 0xb
 	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0xb
-	.uleb128 0x57
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x9f
 	.uleb128 0xb
 	.byte	0x1
-	.byte	0
-	.byte	0
-	.uleb128 0xa0
-	.uleb128 0xb
-	.byte	0x1
 	.uleb128 0x31
 	.uleb128 0x13
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa1
+	.uleb128 0xa0
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa2
+	.uleb128 0xa1
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x31
@@ -15842,7 +15887,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x7
 	.byte	0
 	.byte	0
-	.uleb128 0xa3
+	.uleb128 0xa2
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -15851,7 +15896,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0xa4
+	.uleb128 0xa3
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15876,7 +15921,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa5
+	.uleb128 0xa4
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15899,7 +15944,7 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa6
+	.uleb128 0xa5
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -15927,20 +15972,20 @@ _GLOBAL__sub_I__Z5naivePfS_S_m:
 .Ldebug_ranges0:
 	.quad	.LBB18
 	.quad	.LBE18
-	.quad	.LBB23
-	.quad	.LBE23
-	.quad	0
-	.quad	0
-	.quad	.LBB20
-	.quad	.LBE20
 	.quad	.LBB24
 	.quad	.LBE24
 	.quad	0
 	.quad	0
-	.quad	.LBB22
-	.quad	.LBE22
+	.quad	.LBB20
+	.quad	.LBE20
 	.quad	.LBB25
 	.quad	.LBE25
+	.quad	0
+	.quad	0
+	.quad	.LBB22
+	.quad	.LBE22
+	.quad	.LBB26
+	.quad	.LBE26
 	.quad	0
 	.quad	0
 	.quad	.Ltext0

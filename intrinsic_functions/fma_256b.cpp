@@ -75,9 +75,9 @@ int main(int argc, char* argv[])
 
     for(auto i = 0; i < N; i++)
     {
-        a[i] = 2.0;
+        a[i] = 3.0;
         b[i] = 8.0;
-        c[i] = 0.0;
+        c[i] = 2.0;
     }
 
     {
@@ -85,11 +85,11 @@ int main(int argc, char* argv[])
         vectorized_macro(a, b, c, N);
     }
 
-    // for(auto i = 0; i < N; i++)
-    // {
-    //     std::cout << c[i] << " ";
-    // }
-    // std::cout << std::endl;
+    for(auto i = 0; i < N; i++)
+    {
+        std::cout << c[i] << " ";
+    }
+    std::cout << std::endl;
 
     return 0;
 }  
