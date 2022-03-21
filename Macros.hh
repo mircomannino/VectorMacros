@@ -15,10 +15,17 @@
  */
 #define VADD_128(srca, srcb, dest) \
 asm volatile(                           \
-    "vaddps %[vsrca],%[vsrcb],%[vdest]" \
-    : [vdest] "=x"(dest)                \
-    : [vsrca] "x"(srca),                \
-      [vsrcb] "x"(srcb)                 \
+  "vaddps %[vsrca],%[vsrcb],%[vdest]" \
+  : [vdest] "=x"(dest)                \
+  : [vsrca] "x"(srca),                \
+    [vsrcb] "x"(srcb)                 \
+);
+
+#define VSET1_256(src, dest) \
+asm volatile(                       \
+  "vbroadcastss %[vsrc],%[vdest]"   \
+  : [vdest] "=x"(dest)              \
+  : [vsrc]  "x"(src)                \
 );
 
 /**
