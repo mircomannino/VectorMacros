@@ -337,10 +337,9 @@ _Z16vectorized_macroPffS_m:
 .LBB17:
 	.loc 2 33 19 discriminator 2
 	movq	-80(%rsp), %rax
-	movl	$0, %edx
 #APP
 # 33 "intrinsic_functions/fma_256b.cpp" 1
-	vmovaps (%rax,%rdx,8),%ymm0
+	vmovaps (%rax),%ymm0
 # 0 "" 2
 #NO_APP
 	vmovaps	%ymm0, -56(%rsp)
@@ -354,10 +353,9 @@ _Z16vectorized_macroPffS_m:
 	vmovaps	%ymm0, -24(%rsp)
 	.loc 2 35 19 discriminator 2
 	movq	-96(%rsp), %rax
-	movl	$0, %edx
 #APP
 # 35 "intrinsic_functions/fma_256b.cpp" 1
-	vmovaps (%rax,%rdx,8),%ymm0
+	vmovaps (%rax),%ymm0
 # 0 "" 2
 #NO_APP
 	vmovaps	%ymm0, 8(%rsp)
@@ -374,10 +372,9 @@ _Z16vectorized_macroPffS_m:
 	.loc 2 37 9 discriminator 2
 	vmovaps	8(%rsp), %ymm0
 	movq	-96(%rsp), %rax
-	movl	$0, %edx
 #APP
 # 37 "intrinsic_functions/fma_256b.cpp" 1
-	vmovaps %ymm0,(%rax,%rdx,8)
+	vmovaps %ymm0,(%rax)
 # 0 "" 2
 #NO_APP
 .LBE17:

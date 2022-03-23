@@ -24,33 +24,31 @@ asm volatile(                           \
 #define VSET1_256(src, dest) \
 asm volatile(                       \
   "vbroadcastss %[vsrc],%[vdest]"   \
-  : [vdest] "=x"(dest)              \
-  : [vsrc]  "x"(src)                \
+  : [vdest] "=v"(dest)              \
+  : [vsrc]  "v"(src)                \
 );
 
 /**
  * From memory to register (256b registers)
  * 
  */
-#define VLOAD_256(src, dest, idx) \
+#define VLOAD_256(src, dest) \
 asm volatile(                     \
-	"vmovaps (%[vsrc],%q[vidx],8),%[vdest]"  \
-	: [vdest] "=x"(dest)  \
-	: [vsrc] "r"(src),    \
-    [vidx] "r"(idx)     \
+	"vmovaps (%[vsrc]),%[vdest]"  \
+	: [vdest] "=v"(dest)  \
+	: [vsrc] "r"(src)     \
 );
 
 /**
  * From register to memory (256b registers)
  * 
  */
-#define VSTORE_256(src, dest, idx)  \
+#define VSTORE_256(src, dest)  \
 asm volatile(                       \
-	"vmovaps %[vsrc],(%[vdest],%q[vidx],8)" \
+	"vmovaps %[vsrc],(%[vdest])" \
 	:		                                    \
 	: [vsrc] "v"(src),    \ 
-    [vdest] "r"(dest),  \
-    [vidx] "r"(idx)     \
+    [vdest] "r"(dest)   \
 );
 
 
@@ -80,7 +78,7 @@ asm volatile(                           \
 #define VFMADD_256(srca, srcb, dest) \
 asm volatile(                           \
     "vfmadd231ps %[vsrca],%[vsrcb],%[vdest]" \
-    : [vdest] "+x"(dest)                \
-    : [vsrca] "x"(srca),                \
-      [vsrcb] "x"(srcb)                 \
+    : [vdest] "+v"(dest)                \
+    : [vsrca] "v"(srca),                \
+      [vsrcb] "v"(srcb)                 \
 );
