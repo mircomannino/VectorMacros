@@ -4,34 +4,33 @@
 #include "Timer.hh"
 #include "../Macros.hh"
 
-void naive(float* a, float b, float* c, const uint64_t N)
+void naive(float* a, float *b, float* c, const uint64_t N)
 {  
     for(auto i = 0; i < N; i++)
     {
-        c[i] += a[i] * b;
+        c[i] += a[i] * b[i];
     }
 }
 
-void vectorized(float* a, float b, float* c, const uint64_t N)
+void vectorized(float* a, float* b, float* c, const uint64_t N)
 {
     const uint64_t nb_iter = N / 8;
 
-    __m256 B = _mm256_set1_ps(b);
     for(auto i = 0; i < nb_iter; i++, a+=8, b+=8, c+=8)
     {
-        _mm256_store_ps(c, _mm256_fmadd_ps(*(__m256*)a, B, *(__m256*)c));
+        _mm256_store_ps(c, _mm256_fmadd_ps(*(__m256*)a, *(__m256*)b, *(__m256*)c));
     }
 }
 
-void vectorized_macro(float* a, float b, float* c, const uint64_t N)
+void vectorized_macro(float* a, float* b, float* c, const uint64_t N)
 {
     const uint64_t nb_iter = N / 8;
 
-    __m256 B; VSET1_256(b, B);
     for(auto i = 0; i < nb_iter; i++, a+=8, b+=8, c+=8)
     {
         // VFMADD_256(*(__m256*)a, *(__m256*)b, *(__m256*)c);
         __m256 A; VLOAD_256(a, A);
+        __m256 B; VLOAD_256(b, B);
         __m256 C; VLOAD_256(c, C);
         VFMADD_256(A, B, C);
         VSTORE_256(C, c);
@@ -64,7 +63,7 @@ int main(int argc, char* argv[])
 
     {
         TIMER("Naive");
-        naive(a, d, c, N);
+        naive(a, b, c, N);
     }
 
     for(auto i = 0; i < N; i++)
@@ -76,7 +75,7 @@ int main(int argc, char* argv[])
 
     {
         TIMER("Vectorized");
-        vectorized(a, d, c, N);
+        vectorized(a, b, c, N);
     }
 
     for(auto i = 0; i < N; i++)
@@ -88,7 +87,7 @@ int main(int argc, char* argv[])
 
     {
         TIMER("Vectorized (Macro)");
-        vectorized_macro(a, d, c, N);
+        vectorized_macro(a, b, c, N);
     }
 
     // for(auto i = 0; i < N; i++)
