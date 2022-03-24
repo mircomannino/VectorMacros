@@ -1,4 +1,4 @@
-CXX=g++
+CXX=icpx
 
 # scalar
 ${CXX} ${CXX_FLAGS} intrinsic_functions/scalar.cpp -o bin/scalar -I utils/ -g
