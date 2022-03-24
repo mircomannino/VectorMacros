@@ -1,5 +1,5 @@
 CXX=g++
-CXX_FLAGS="-O3"
+CXX_FLAGS="-O0"
 
 # scalar
 ${CXX} ${CXX_FLAGS} intrinsic_functions/scalar.cpp -o bin/scalar -I utils/ -g
