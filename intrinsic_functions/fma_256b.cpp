@@ -12,13 +12,13 @@ void naive(float* a, float* b, float* c, const uint64_t N)
     }
 }
 
-void vectorized(float* a, float* b, float* c, const uint64_t N)
+void vectorized(float* a, float b, float* c, const uint64_t N)
 {
     const uint64_t nb_iter = N / 8;
 
     for(auto i = 0; i < nb_iter; i++, a+=8, b+=8, c+=8)
     {
-        _mm256_store_ps(c, _mm256_fmadd_ps(*(__m256*)a, *(__m256*)b, *(__m256*)c));
+        _mm256_store_ps(c, _mm256_fmadd_ps(*(__m256*)a, _mm256_set1_ps(b), *(__m256*)c));
     }
 }
 
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
 
     {
         TIMER("Vectorized");
-        vectorized(a, b, c, N);
+        vectorized(a, d, c, N);
     }
 
     for(auto i = 0; i < N; i++)
