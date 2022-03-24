@@ -16,9 +16,10 @@ void vectorized(float* a, float b, float* c, const uint64_t N)
 {
     const uint64_t nb_iter = N / 8;
 
+    __m256 B = _mm256_set1_ps(b);
     for(auto i = 0; i < nb_iter; i++, a+=8, b+=8, c+=8)
     {
-        _mm256_store_ps(c, _mm256_fmadd_ps(*(__m256*)a, _mm256_set1_ps(b), *(__m256*)c));
+        _mm256_store_ps(c, _mm256_fmadd_ps(*(__m256*)a, B, *(__m256*)c));
     }
 }
 
@@ -26,12 +27,11 @@ void vectorized_macro(float* a, float b, float* c, const uint64_t N)
 {
     const uint64_t nb_iter = N / 8;
 
-
+    __m256 B; VSET1_256(b, B);
     for(auto i = 0; i < nb_iter; i++, a+=8, b+=8, c+=8)
     {
         // VFMADD_256(*(__m256*)a, *(__m256*)b, *(__m256*)c);
         __m256 A; VLOAD_256(a, A);
-        __m256 B; VSET1_256(b, B);
         __m256 C; VLOAD_256(c, C);
         VFMADD_256(A, B, C);
         VSTORE_256(C, c);
