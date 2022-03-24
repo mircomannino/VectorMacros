@@ -4,11 +4,11 @@
 #include "Timer.hh"
 #include "../Macros.hh"
 
-void naive(float* a, float* b, float* c, const uint64_t N)
+void naive(float* a, float b, float* c, const uint64_t N)
 {  
     for(auto i = 0; i < N; i++)
     {
-        c[i] += a[i] * b[i];
+        c[i] += a[i] * d;
     }
 }
 
@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
 
     {
         TIMER("Naive");
-        naive(a, b, c, N);
+        naive(a, d, c, N);
     }
 
     for(auto i = 0; i < N; i++)
