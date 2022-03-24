@@ -8,7 +8,7 @@ void naive(float* a, float b, float* c, const uint64_t N)
 {  
     for(auto i = 0; i < N; i++)
     {
-        c[i] += a[i] * d;
+        c[i] += a[i] * b;
     }
 }
 
