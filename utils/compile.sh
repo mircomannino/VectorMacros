@@ -1,4 +1,4 @@
-CXX=icpx
+CXX=g++
 CXX_FLAGS="-O3"
 
 # scalar
